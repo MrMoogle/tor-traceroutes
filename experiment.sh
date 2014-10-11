@@ -1,6 +1,6 @@
 #--------------------------------------------------------------
 # Purpose: The main shell script that runs the experiment
-# Execution: bash insertIntoDb.sh <traceroutes folder name>
+# Execution: nohup bash experiment.sh & 
 # Author: Oscar Li
 #--------------------------------------------------------------
 
@@ -13,7 +13,8 @@ mkdir $ENTRY_DIRNAME
 mkdir $EXIT_DIRNAME
 
 # Copies back the traceroute data, deletes it, and runs a new traceroute job
-function nodeOp {
+function nodeOp 
+{
 	scp -o ConnectTimeout=5 -r princeton_oli@$1:entryResults $ENTRY_DIRNAME/$1 2> /dev/null 
   scp -o ConnectTimeout=5 -r princeton_oli@$1:exitResults $EXIT_DIRNAME/$1 2> /dev/null 
 	
