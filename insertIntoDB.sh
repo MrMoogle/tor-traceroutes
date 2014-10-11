@@ -1,11 +1,17 @@
 #!/bin/bash
 #--------------------------------------------------------------
 # Purpose: Inserts traceroute files into database
-# Execution: bash insertIntoDb.sh <traceroutes folder name>
+# Execution: bash insertIntoDb.sh <traceroutes folder name> <
 # Author: Oscar Li
 #--------------------------------------------------------------
 
 cd $1
+
+type="Entry"
+if [[ $1 == *exit* ]];
+then
+	type="Exit"
+fi
 
 for host in *
 do
@@ -45,9 +51,9 @@ do
 			fi
 
 			# Inserts into database
-			query="INSERT INTO paths (tstamp, srcip, srcas, destip, destas, path, valid) \
+			query="INSERT INTO paths (tstamp, srcip, srcas, destip, destas, path, type, valid) \
 				   VALUES (to_timestamp('$tstamp', 'MM-DD-YY-HH24:MI'), \
-				   		   '$srcIP', '$srcAS', '$destIP', '$destAS', '$path', $valid);"
+				   		   '$srcIP', '$srcAS', '$destIP', '$destAS', '$path', '$type', $valid);"
 			psql -U oli -d postgres -w -c "$query"
 
 			# #For debug
@@ -59,8 +65,14 @@ do
 			# echo "tstamp: $tstamp"
 			# echo "valid: $valid"
 			# echo
+
+			rm "$traceroute" 
 		done
+
 		cd ..
+		rm -rf "$destIP"
 	done
+	
 	cd ..
+	rm -rf "$host"
 done

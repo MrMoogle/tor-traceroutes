@@ -21,29 +21,27 @@ function nodeOp {
 	then
     scp exitNodes.txt princeton_oli@$1:.
     scp entryNodes.txt princeton_oli@$1:. 
-    ssh -n princeton_oli@$1 "rm -rf entryResults"
-    ssh -n princeton_oli@$1 "rm -rf exitResults"
-    ssh -n princeton_oli@$1 "nohup bash trace.sh > /dev/null 2>&1"
+    ssh -n princeton_oli@$1 "rm -rf entryResults && rm -rf exitResults && nohup bash trace.sh > /dev/null 2>&1"
 	fi 
 }
 
 # Gets most updated list of Tor entry guards
-# mv entry.txt foo.txt
-# python scripts/tor_getEntryNodes.py foo.txt > entry.txt
+# mv entryNodes.txt foo.txt
+# python scripts/tor_getEntryNodes.py foo.txt > entryNodes.txt
 # rm foo.txt
 
 # Gets most updated list of Tor exit guards
-# mv exit.txt foo.txt
-# python scripts/tor_getExitNodes.py foo.txt > exit.txt
+# mv exitNodes.txt foo.txt
+# python scripts/tor_getExitNodes.py foo.txt > exitNodes.txt
 # rm foo.txt
 
 # Gets list of active PL nodes
-python scripts/retrieveActiveNodes.py > temp.txt
-if [ `wc -l < temp.txt` -g 0 ];
-then
-  sort temp.txt > nodes.txt
-fi 
-rm temp.txt
+# python scripts/retrieveActiveNodes.py > temp.txt
+# if [ `wc -l < temp.txt` -g 0 ];
+# then
+#   sort temp.txt > nodes.txt
+# fi 
+# rm temp.txt
 
 # Copies traceroute data back to local machine
 while read line           
