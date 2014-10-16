@@ -66,6 +66,9 @@ do
 			# echo "valid: $valid"
 			# echo
 
+
+			cd .. 
+
 			rm "$traceroute" 
 		done
 
@@ -76,3 +79,6 @@ do
 	cd ..
 	rm -rf "$host"
 done
+
+cd ..
+rmdir "$1"

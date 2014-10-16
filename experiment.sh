@@ -27,22 +27,26 @@ function nodeOp
 }
 
 # Gets most updated list of Tor entry guards
-# mv entryNodes.txt foo.txt
-# python scripts/tor_getEntryNodes.py foo.txt > entryNodes.txt
-# rm foo.txt
+mv entryNodes.txt foo.txt
+python scripts/tor_getEntryNodes.py foo.txt > entryNodes.txt
+rm foo.txt
 
 # Gets most updated list of Tor exit guards
-# mv exitNodes.txt foo.txt
-# python scripts/tor_getExitNodes.py foo.txt > exitNodes.txt
-# rm foo.txt
+mv exitNodes.txt foo.txt
+python scripts/tor_getExitNodes.py foo.txt > exitNodes.txt
+rm foo.txt
+
+# Backup
+cp entryNodes.txt backup/.
+cp exitNodes.txt backup/.
 
 # Gets list of active PL nodes
-# python scripts/retrieveActiveNodes.py > temp.txt
-# if [ `wc -l < temp.txt` -g 0 ];
-# then
-#   sort temp.txt > nodes.txt
-# fi 
-# rm temp.txt
+python scripts/retrieveActiveNodes.py > temp.txt
+if [ `wc -l < temp.txt` -g 0 ];
+then
+  sort temp.txt > nodes.txt
+fi 
+rm temp.txt
 
 # Copies traceroute data back to local machine
 while read line           
