@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #--------------------------------------------------------------
 # Purpose: The main shell script that runs the experiment
 # Execution: nohup bash experiment.sh & 
@@ -26,6 +28,8 @@ function nodeOp
 	fi 
 }
 
+cd
+
 # Gets most updated list of Tor entry guards
 mv entryNodes.txt foo.txt
 python scripts/tor_getEntryNodes.py foo.txt > entryNodes.txt
@@ -42,7 +46,7 @@ cp exitNodes.txt backup/.
 
 # Gets list of active PL nodes
 python scripts/retrieveActiveNodes.py > temp.txt
-if [ `wc -l < temp.txt` -g 0 ];
+if ((`wc -l < temp.txt` > 0));
 then
   sort temp.txt > nodes.txt
 fi 
@@ -56,4 +60,6 @@ do
  	echo $line >> output/output"($DATE)"
 done < nodes.txt
 
-# TODO: Inserts into database
+# Inserts into database
+nohup bash insertIntoDB.sh "$ENTRY_DIRNAME" &
+nohup bash insertIntoDB.sh "$EXIT_DIRNAME" &

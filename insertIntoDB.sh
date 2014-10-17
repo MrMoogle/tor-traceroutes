@@ -66,9 +66,6 @@ do
 			# echo "valid: $valid"
 			# echo
 
-
-			cd .. 
-
 			rm "$traceroute" 
 		done
 
