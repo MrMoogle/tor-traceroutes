@@ -9,8 +9,8 @@
 
 # Creates the name of the directory that we copy to
 DATE=`date +%m-%d-%y`
-ENTRY_DIRNAME=entryResults"($DATE)"
-EXIT_DIRNAME=exitResults"($DATE)"
+ENTRY_DIRNAME=/mnt/external-drive/entryResults"($DATE)"
+EXIT_DIRNAME=/mnt/external-drive/exitResults"($DATE)"
 mkdir $ENTRY_DIRNAME
 mkdir $EXIT_DIRNAME
 
@@ -18,17 +18,18 @@ mkdir $EXIT_DIRNAME
 function nodeOp 
 {
 	scp -o ConnectTimeout=5 -r princeton_oli@$1:entryResults $ENTRY_DIRNAME/$1 2> /dev/null 
-  scp -o ConnectTimeout=5 -r princeton_oli@$1:exitResults $EXIT_DIRNAME/$1 2> /dev/null 
+  	scp -o ConnectTimeout=5 -r princeton_oli@$1:exitResults $EXIT_DIRNAME/$1 2> /dev/null 
 	
 	if [ -e "$DIRNAME"/$1 ];
 	then
-    scp exitNodes.txt princeton_oli@$1:.
-    scp entryNodes.txt princeton_oli@$1:. 
-    ssh -n princeton_oli@$1 "rm -rf entryResults && rm -rf exitResults && nohup bash trace.sh > /dev/null 2>&1"
+	    scp exitNodes.txt princeton_oli@$1:.
+	    scp entryNodes.txt princeton_oli@$1:. 
+	    ssh -n princeton_oli@$1 "rm -rf entryResults && rm -rf exitResults && nohup bash trace.sh > /dev/null 2>&1"
 	fi 
 }
 
-cd
+# Navigates to correct directory 
+cd /home/oli
 
 # Gets most updated list of Tor entry guards
 mv entryNodes.txt foo.txt
@@ -61,5 +62,6 @@ do
 done < nodes.txt
 
 # Inserts into database
-nohup bash insertIntoDB.sh "$ENTRY_DIRNAME" &
-nohup bash insertIntoDB.sh "$EXIT_DIRNAME" &
+cd /mnt/external-drive/
+nohup bash ~/scripts/insertIntoDB2.sh "$ENTRY_DIRNAME" &
+nohup bash ~/scripts/insertIntoDB2.sh "$EXIT_DIRNAME" &
