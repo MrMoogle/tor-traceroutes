@@ -1,6 +1,8 @@
 # --------------------------------------------------------
-# Purpose: Prints 5 Tor guards with highest bandiwidths 
-# Execution: python tor_getHighestBWEntryNodes.py
+# Purpose: Prints n Tor entry/exit relays with highest bandwidths 
+# Execution: 
+#	1) python tor_getHighestBWEntryNodes.py n Exit
+# 	2) python tor_getHighestBWEntryNodes.py n Guard
 # Notes: Make sure Tor control port is running
 # --------------------------------------------------------
 
@@ -9,11 +11,14 @@ import StringIO
 import re
 import sys
 
-# Stores (ip, bandwidth) pairs with highest bandwidths
-l = [("", 0),("", 0),("", 0),("", 0), ("", 0)]
-
 # Length of L
-LENGTH = 5
+LENGTH = sys.argv[1]
+RELAY_TYPE = sys.argv[2]
+
+# Stores (ip, bandwidth) pairs with highest bandwidths
+l = [] 
+for i in range(0, LENGTH):
+	l.append(("", 0))
 
 # Inserts an (ip, bandwidth) pair into l if possible 
 def insert((ip, bandwidth)):
@@ -41,7 +46,7 @@ with Controller.from_port(port = 9051) as controller:
 	prevPrevLine = ""
 	prevLine = ""
 	for line in buf:
-		if "Bandwidth" in line and "Guard" in prevLine:
+		if "Bandwidth" in line and RELAY_TYPE in prevLine:
 			bandwidth = re.search(r'\d+', line)
 			ip = re.search('\d+\.\d+\.\d+\.\d+', prevPrevLine)
 			insert((ip.group(), int(bandwidth.group())))
