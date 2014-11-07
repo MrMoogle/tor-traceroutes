@@ -12,7 +12,7 @@ import re
 import sys
 
 # Length of L
-LENGTH = sys.argv[1]
+LENGTH = int(sys.argv[1])
 RELAY_TYPE = sys.argv[2]
 
 # Stores (ip, bandwidth) pairs with highest bandwidths
