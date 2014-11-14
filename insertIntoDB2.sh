@@ -42,20 +42,22 @@ function insert
 	query="INSERT INTO paths (tstamp, srcip, srcas, destip, destas, path, type, valid) \
 		   VALUES (to_timestamp('$tstamp', 'MM-DD-YY-HH24:MI'), \
 		   		   '$srcIP', '$srcAS', '$destIP', '$destAS', '$path', '$type', $valid);"
-	psql -U oli -d postgres -w -c "$query"
+	# psql -U oli -d postgres -w -c "$query"
 
 	# #For debug
-	# echo "HOST: $host"
-	# echo "srcIP: $srcIP"
-	# echo "srcAS: $srcAS"
-	# echo "destIP: $destIP"
-	# echo "destAS: $destAS"
-	# echo "tstamp: $tstamp"
-	# echo "valid: $valid"
-	# echo	
+	echo "HOST: $host"
+	echo "srcIP: $srcIP"
+	echo "srcAS: $srcAS"
+	echo "destIP: $destIP"
+	echo "destAS: $destAS"
+	echo "tstamp: $tstamp"
+	echo "valid: $valid"
+	echo	
 }
 
-cd $1
+#cd $1
+# e.g. entryResults/entryResults...
+cd /mnt/external-drive/$1
 
 type="Entry"
 if [[ $1 == *exit* ]];
@@ -63,20 +65,20 @@ then
 	type="Exit"
 fi
 
-touch /home/oli/logs/insertIntoDB3
+touch /home/oli/logs/insertIntoDB2
 
 for host in *
 do
 	cd $host 
 	for traceroute in * 
 	do 
-		insert "/home/oli/$1/$host/$traceroute" &
+		insert "/mnt/external-drive/$1/$host/$traceroute" &
 		echo "$host:$traceroute" >> /home/oli/logs/insertIntoDB2 &  
 	done
 
 	cd ..
 	sleep 15
-	rm -rf $host
+	# rm -rf $host
 done
 
 cd ..

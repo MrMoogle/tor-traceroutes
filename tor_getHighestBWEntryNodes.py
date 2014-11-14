@@ -3,7 +3,9 @@
 # Execution: 
 #	1) python tor_getHighestBWEntryNodes.py n Exit
 # 	2) python tor_getHighestBWEntryNodes.py n Guard
-# Notes: Make sure Tor control port is running
+# Notes: 
+# 	1) Tor control port must be running
+#	2) Highest BW relays at bottom of list
 # --------------------------------------------------------
 
 from stem.control import Controller
