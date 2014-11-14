@@ -15,7 +15,7 @@ function insert
 		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | sed -n 4p | cut -f1 -d" "`
 	fi
 
-	destIP=`echo $1 | cut -f1 -d "("`
+	destIP=`echo $1 | cut -f7 -d "/" | cut -f1 -d "("`
 	destAS="AS"`whois -h whois.cymru.com " -v $destIP" | sed -n 4p | cut -f1 -d" "`
 	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1`
 	path=`cat "$1"`
