@@ -65,7 +65,7 @@ then
 	type="Exit"
 fi
 
-touch /home/oli/logs/insertIntoDB2
+#touch /home/oli/logs/insertIntoDB2
 
 for host in *
 do
@@ -73,7 +73,7 @@ do
 	for traceroute in * 
 	do 
 		insert "/mnt/external-drive/$1/$host/$traceroute" &
-		echo "$host:$traceroute" >> /home/oli/logs/insertIntoDB2 &  
+		#echo "$host:$traceroute" >> /home/oli/logs/insertIntoDB2 &  
 	done
 
 	cd ..
