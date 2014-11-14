@@ -1,0 +1,1094 @@
+146-179.surfsnel.dsl.internl.net 	 145.99.179.146 	 20507
+147-179.surfsnel.dsl.internl.net 	 145.99.179.147 	 20507
+75-130-96-12.static.oxfr.ma.charter.com 	 75.130.96.12 	 10326
+75-130-96-13.static.oxfr.ma.charter.com 	 75.130.96.13 	 10326
+We are authorized! 	  	 
+a80-101-186-42.adsl.xs4all.nl 	 80.101.186.42 	 3265
+adrastea.mcs.suffolk.edu 	 192.138.213.236 	 20143
+agni.iitd.ernet.in 	 103.27.9.3 	 132780
+aguila1.lsi.upc.edu 	 147.83.29.232 	 13041
+aguila2.lsi.upc.edu 	 147.83.29.234 	 13041
+ait05.us.es 	 193.147.162.166 	 766
+ait21.us.es 	 193.147.162.182 	 766
+aladdin.planetlab.extranet.uni-passau.de 	 195.37.16.121 	 680
+ampelos.ipv6.lip6.fr 	 132.227.62.92 	 1307
+anateus.ipv6.lip6.fr 	 132.227.62.85 	 1307
+arari.snu.ac.kr 	 147.46.240.166 	 9488
+charon.cs.binghamton.edu 	 128.226.103.67 	 4190
+chimay.infonet.fundp.ac.be 	 138.48.3.201 	 2611
+chronos.disy.inf.uni-konstanz.de 	 134.34.246.5 	 553
+cs-planetlab3.cs.surrey.sfu.ca 	 206.12.16.154 	 11105
+cs-planetlab4.cs.surrey.sfu.ca 	 206.12.16.155 	 11105
+cs743.cs.nthu.edu.tw 	 140.114.89.44 	 18047
+cs744.cs.nthu.edu.tw 	 140.114.89.45 	 18047
+csplanet1.ncat.edu 	 152.8.108.158 	 81
+csplanet2.ncat.edu 	 152.8.109.170 	 81
+csplanetlab3.kaist.ac.kr 	 143.248.55.128 	 1781
+csplanetlab4.kaist.ac.kr 	 143.248.55.129 	 1781
+dannan.disy.inf.uni-konstanz.de 	 134.34.246.4 	 553
+datacomngn.cnu.ac.kr 	  	 
+deimos.cecalc.ula.ve 	 150.189.2.102 	 27807
+dfn-ple1.x-win.dfn.de 	 188.1.240.186 	 680
+dplanet1.uoc.edu 	 213.73.40.105 	 15633
+dplanet2.uoc.edu 	 213.73.40.106 	 15633
+dschinni.planetlab.extranet.uni-passau.de 	 195.37.16.125 	 680
+earth.cs.brown.edu 	 192.91.235.229 	 11078
+ebb.colgate.edu 	 149.43.80.20 	 1289
+empusa.ipv6.lip6.fr 	 132.227.62.96 	 1307
+evghu1.colbud.hu 	  	 
+evghu10.colbud.hu 	  	 
+evghu11.colbud.hu 	  	 
+evghu12.colbud.hu 	  	 
+evghu13.colbud.hu 	  	 
+evghu14.colbud.hu 	  	 
+evghu2.colbud.hu 	  	 
+evghu4.colbud.hu 	  	 
+evghu5.colbud.hu 	  	 
+evghu6.colbud.hu 	  	 
+evghu7.colbud.hu 	  	 
+evghu8.colbud.hu 	  	 
+evghu9.colbud.hu 	  	 
+f20bootcd.cs.princeton.edu 	  	 
+flow.colgate.edu 	 149.43.80.22 	 1289
+fobos.cecalc.ula.ve 	 150.189.2.101 	 27807
+gschembra3.diit.unict.it 	 151.97.9.224 	 137
+gschembra4.diit.unict.it 	 151.97.9.225 	 137
+host1.planetlab.informatik.tu-darmstadt.de 	 130.83.166.243 	 8365
+host147-82-static.93-94-b.business.telecomitalia.it 	 94.93.82.147 	 3269
+host149-82-static.93-94-b.business.telecomitalia.it 	 94.93.82.149 	 3269
+host2.planetlab.informatik.tu-darmstadt.de 	 130.83.166.245 	 8365
+host3-plb.loria.fr 	 152.81.47.4 	 2200
+host4-plb.loria.fr 	 152.81.47.5 	 2200
+iason.inf.uth.gr 	 83-212-32-131.uth.gr.
+83.212.32.131 	 AS
+inriarennes1.irisa.fr 	 131.254.208.12 	 1938
+inriarennes2.irisa.fr 	 131.254.208.13 	 1938
+int-pl1.ise.eng.osaka-u.ac.jp 	  	 
+int-pl2.ise.eng.osaka-u.ac.jp 	  	 
+iraplab1.iralab.uni-karlsruhe.de 	 193.196.39.9 	 553
+iraplab2.iralab.uni-karlsruhe.de 	 193.196.39.10 	 553
+itchy.comlab.bth.se 	 194.47.148.170 	 1653
+itchy.cs.uga.edu 	 128.192.101.217 	 36441
+jupiter.cs.brown.edu 	 192.91.235.232 	 11078
+jupiter.planetlab.carleton.ca 	 134.117.226.181 	 29773
+kc-sce-plab1.umkc.edu 	 204.56.0.137 	 3390
+kc-sce-plab2.umkc.edu 	 204.56.0.138 	 3390
+kostis.di.uoa.gr 	  	 
+ks.measurementlab.net 	 64.9.225.99 	 36492
+kupl1.ittc.ku.edu 	 129.237.161.193 	 2496
+kupl2.ittc.ku.edu 	 129.237.161.194 	 2496
+lab1.asmdba.com 	  	 
+lefthand.eecs.harvard.edu 	 140.247.60.123 	 1742
+lim-planetlab-1.univ-reunion.fr 	 194.199.68.165 	 2200
+lim-planetlab-2.univ-reunion.fr 	 194.199.68.166 	 2200
+marie.iet.unipi.it 	 131.114.53.188 	 137
+mars.planetlab.haw-hamburg.de 	 141.22.213.35 	 680
+medea.inf.uth.gr 	 83-212-32-133.uth.gr.
+83.212.32.133 	 AS
+mercury.silicon-valley.ru 	 82.179.176.42 	 31575
+merkur.planetlab.haw-hamburg.de 	 141.22.213.34 	 680
+metis.mcs.suffolk.edu 	 192.138.213.238 	 20143
+miranda.planetlab.cs.umd.edu 	 128.8.126.98 	 27
+mlab1.gr-ix.gr 	  	 
+mlab2.gr-ix.gr 	  	 
+mlab3.gr-ix.gr 	  	 
+mlabtest.cs.princeton.edu 	  	 
+mlc1.measurementlab.net 	 64.9.225.73 	 36492
+mlc2.measurementlab.net 	 64.9.225.86 	 36492
+mnc1.pusan.ac.kr 	  	 
+mnc2.pusan.ac.kr 	  	 
+mtuplanetlab1.cs.mtu.edu 	 141.219.252.132 	 237
+mtuplanetlab2.cs.mtu.edu 	 141.219.252.133 	 237
+netapp6.cs.kookmin.ac.kr 	 203.246.112.147 	 18176
+netapp7.cs.kookmin.ac.kr 	 203.246.112.148 	 18176
+newbootcd.cs.princeton.edu 	  	 
+nis-planet1.doshisha.ac.jp 	  	 
+nis-planet2.doshisha.ac.jp 	  	 
+node0.planetlab.etl.luc.edu 	 147.126.66.15 	 7968
+node01.verivue.princeton.edu 	  	 
+node02.verivue.princeton.edu 	  	 
+node1.planet-lab.titech.ac.jp 	  	 
+node1.planetlab.albany.edu 	 169.226.40.2 	 22990
+node1.planetlab.etl.luc.edu 	 147.126.66.17 	 7968
+node1.planetlab.mathcs.emory.edu 	 170.140.119.69 	 3512
+node1.planetlab.uprr.pr 	 136.145.251.241 	 5786
+node1pl.planet-lab.telecom-lille1.eu 	 node1pl.planet-lab.telecom-lille.fr.
+194.167.254.18 	 AS
+node2.planetlab.albany.edu 	 169.226.40.4 	 22990
+node2.planetlab.mathcs.emory.edu 	 170.140.119.70 	 3512
+node2.planetlab.uprr.pr 	 136.145.251.242 	 5786
+node2pl.planet-lab.telecom-lille1.eu 	 node2pl.planet-lab.telecom-lille.fr.
+194.167.254.19 	 AS
+node3.planet-lab.titech.ac.jp 	  	 
+node4.planet-lab.titech.ac.jp 	  	 
+nodea.howard.edu 	 138.238.250.155 	 33084
+nodeb.howard.edu 	 138.238.250.157 	 33084
+nw142.csie.ncu.edu.tw 	 140.115.156.142 	 18420
+nw144.csie.ncu.edu.tw 	 140.115.156.144 	 18420
+of-planet5.stanford.edu 	  	 
+onelab-1.fhi-fokus.de 	 193.175.135.60 	 680
+onelab-2.fhi-fokus.de 	 193.175.135.61 	 680
+onelab1.info.ucl.ac.be 	 130.104.72.200 	 2611
+onelab1.warsaw.rd.tp.pl 	 195.116.53.21 	 29535
+onelab10.pl.sophia.inria.fr 	 emoi.pl.sophia.inria.fr.
+138.96.116.20 	 AS
+onelab11.pl.sophia.inria.fr 	 eclat.pl.sophia.inria.fr.
+138.96.116.21 	 AS
+onelab2.info.ucl.ac.be 	 130.104.72.201 	 2611
+onelab2.warsaw.rd.tp.pl 	 195.116.53.22 	 29535
+onelab3.info.ucl.ac.be 	 130.104.72.213 	 2611
+onelab3.warsaw.rd.tp.pl 	 195.116.53.23 	 29535
+onelab4.warsaw.rd.tp.pl 	 195.116.53.24 	 29535
+onelab6.iet.unipi.it 	 131.114.59.242 	 137
+onelab7.iet.unipi.it 	 131.114.59.243 	 137
+opal.cnu.ac.kr 	 168.188.128.89 	 18298
+openlab01.pl.sophia.inria.fr 	 blitz.pl.sophia.inria.fr.
+138.96.116.22 	 AS
+ops.ii.uam.es 	 150.244.58.159 	 766
+orbpl1.rutgers.edu 	 128.6.192.158 	 46
+orbpl2.rutgers.edu 	 128.6.192.156 	 46
+orval.infonet.fundp.ac.be 	 138.48.3.202 	 2611
+osiris.planetlab.cs.umd.edu 	 128.8.126.78 	 27
+pandora.we.po.opole.pl 	 217.173.198.153 	 21182
+peeramide.irisa.fr 	 131.254.208.10 	 1938
+peeramidion.irisa.fr 	 131.254.208.11 	 1938
+pierre.iet.unipi.it 	 131.114.53.187 	 137
+pl-dccd-01.cua.uam.mx 	 201.155.87.123 	 8151
+pl-dccd-02.cua.uam.mx 	 201.155.87.63 	 8151
+pl-node-0.csl.sri.com 	 192.12.33.100 	 30
+pl-node-1.csl.sri.com 	 192.12.33.102 	 30
+pl001.ece.upatras.gr 	 ;; connection timed out; no servers could be reached 	 
+pl002.ece.upatras.gr 	 ;; connection timed out; no servers could be reached 	 
+pl01.comp.polyu.edu.hk 	 202.125.215.10 	 4616
+pl02.comp.polyu.edu.hk 	 202.125.215.12 	 4616
+pl1-higashi.ics.es.osaka-u.ac.jp 	 olive.ics.es.osaka-u.ac.jp.
+133.1.17.72 	 AS
+pl1.6test.edu.cn 	 219.243.208.60 	 23910
+pl1.bell-labs.fr 	 159.217.144.110 	 29150
+pl1.bit.uoit.ca 	 205.211.183.2 	 32157
+pl1.ccsrfi.net 	 131.227.23.10 	 786
+pl1.cewit.stonybrook.edu 	 130.245.191.59 	 5719
+pl1.cis.uab.edu 	 138.26.66.4 	 3452
+pl1.cs.montana.edu 	 153.90.1.34 	 13476
+pl1.cs.unm.edu 	 198.83.85.44 	 40498
+pl1.cs.yale.edu 	 128.36.233.153 	 29
+pl1.csl.utoronto.ca 	 142.150.238.12 	 239
+pl1.dce.edu 	 dce.edu.
+122.160.182.50 	 AS
+pl1.eecs.utk.edu 	 160.36.57.172 	 3450
+pl1.eng.monash.edu.au 	 130.194.252.8 	 56132
+pl1.pku.edu.cn 	 162.105.205.21 	 4538
+pl1.planet.cs.kent.edu 	 131.123.34.35 	 11050
+pl1.planetlab.uvic.ca 	  	 
+pl1.prakinf.tu-ilmenau.de 	 141.24.249.129 	 680
+pl1.rcc.uottawa.ca 	 216.48.80.12 	 25826
+pl1.sos.info.hiroshima-cu.ac.jp 	 165.242.90.128 	 2506
+pl1.tailab.eu 	 194.79.147.164 	 13193
+pl1.ucs.indiana.edu 	 156.56.250.226 	 87
+pl1.uni-rostock.de 	 139.30.240.191 	 680
+pl1.yonsei.ac.kr 	 222.99.146.81 	 4766
+pl1snu.koren.kr 	 116.89.165.133 	 9270
+pl2-higashi.ics.es.osaka-u.ac.jp 	 willow.ics.es.osaka-u.ac.jp.
+133.1.17.73 	 AS
+pl2.6test.edu.cn 	 219.243.208.62 	 23910
+pl2.bell-labs.fr 	 159.217.144.112 	 29150
+pl2.bit.uoit.ca 	 205.211.183.4 	 32157
+pl2.ccsrfi.net 	 131.227.23.12 	 786
+pl2.cewit.stonybrook.edu 	 130.245.191.60 	 5719
+pl2.cis.uab.edu 	 138.26.66.5 	 3452
+pl2.cs.montana.edu 	 153.90.1.35 	 13476
+pl2.cs.unm.edu 	 198.83.85.45 	 40498
+pl2.cs.yale.edu 	 128.36.233.154 	 29
+pl2.csl.utoronto.ca 	 142.150.238.13 	 239
+pl2.eecs.utk.edu 	 160.36.57.173 	 3450
+pl2.eng.monash.edu.au 	 130.194.252.9 	 56132
+pl2.ernet.in 	 ;; connection timed out; no servers could be reached 	 
+pl2.pku.edu.cn 	 162.105.205.22 	 4538
+pl2.planet.cs.kent.edu 	 131.123.34.36 	 11050
+pl2.planetlab.uvic.ca 	  	 
+pl2.prakinf.tu-ilmenau.de 	 141.24.249.131 	 680
+pl2.rcc.uottawa.ca 	 216.48.80.14 	 25826
+pl2.sos.info.hiroshima-cu.ac.jp 	 165.242.90.129 	 2506
+pl2.tailab.eu 	 194.79.147.165 	 13193
+pl2.ucs.indiana.edu 	 156.56.250.227 	 87
+pl2.uni-rostock.de 	 139.30.240.192 	 680
+pl2.yonsei.ac.kr 	 222.99.146.83 	 4766
+pl2.zju.edu.cn 	 210.32.181.184 	 4538
+pl221nassau0.cs.princeton.edu 	  	 
+pl2snu.koren.kr 	 116.89.165.135 	 9270
+pl3.coep.org.in 	  	 
+pl3.cs.unm.edu 	 198.83.85.46 	 40498
+pl3.planet.cs.kent.edu 	 131.123.34.37 	 11050
+pl3.planetlab.uvic.ca 	  	 
+pl4.coep.org.in 	  	 
+pl4.cs.unm.edu 	 198.83.85.47 	 40498
+pl4.planetlab.uvic.ca 	  	 
+pl5.planetlab.uvic.ca 	  	 
+plab-1.diegm.uniud.it 	 158.110.27.116 	 137
+plab-1.sinp.msu.ru 	 213.131.1.101 	 12925
+plab-2.diegm.uniud.it 	 158.110.27.127 	 137
+plab-2.sinp.msu.ru 	 213.131.1.102 	 12925
+plab1.create-net.org 	 193.206.22.133 	 137
+plab1.cs.msu.ru 	 188.44.50.106 	 2848
+plab1.cs.ust.hk 	 143.89.49.73 	 3363
+plab1.engr.sjsu.edu 	 130.65.6.225 	 2152
+plab1.larc.usp.br 	 143.107.111.234 	 28571
+plab1.nec-labs.com 	 138.15.10.55 	 209
+plab1.ple.silweb.pl 	 83.230.127.121 	 8508
+plab1.psgtech.ac.in 	 59.163.146.20 	 4755
+plab1.tidprojects.com 	  	 
+plab2.create-net.org 	 193.206.22.134 	 137
+plab2.cs.ust.hk 	 143.89.49.74 	 3363
+plab2.engr.sjsu.edu 	 130.65.6.227 	 2152
+plab2.larc.usp.br 	 143.107.111.235 	 28571
+plab2.nec-labs.com 	 138.15.10.56 	 209
+plab2.ple.silweb.pl 	 83.230.127.122 	 8508
+plab2.psgtech.ac.in 	 59.163.146.21 	 4755
+plab2.tidprojects.com 	  	 
+plab3.cs.msu.ru 	 93.180.19.232 	 2848
+plab3.eece.ksu.edu 	 129.130.252.140 	 2701
+plab3.nec-labs.com 	 138.15.10.59 	 209
+plab3.ple.silweb.pl 	 83.230.127.123 	 8508
+plab4.eece.ksu.edu 	 129.130.252.141 	 2701
+plab4.ple.silweb.pl 	 83.230.127.124 	 8508
+planck227ple.test.ibbt.be 	 193.191.148.227 	 2611
+planck228ple.test.ibbt.be 	 193.191.148.228 	 2611
+planck249ple.test.iminds.be 	 193.191.148.249 	 2611
+planck250ple.test.iminds.be 	 193.191.148.250 	 2611
+planet-2.utn.edu.ar 	  	 
+planet-lab-node1.netgroup.uniroma2.it 	 160.80.221.37 	 137
+planet-lab-node2.netgroup.uniroma2.it 	 160.80.221.39 	 137
+planet-lab.iki.rssi.ru 	 193.232.27.246 	 3218
+planet-lab1.cs.ucr.edu 	 169.235.24.133 	 6106
+planet-lab1.itba.edu.ar 	 190.227.163.142 	 7303
+planet-lab1.uba.ar 	 157.92.44.101 	 3449
+planet-lab1.ufabc.edu.br 	 200.133.215.141 	 262742
+planet-lab2.cs.ucr.edu 	 169.235.24.232 	 6106
+planet-lab2.itba.edu.ar 	 190.227.163.141 	 7303
+planet-lab2.uba.ar 	 157.92.44.102 	 3449
+planet-lab2.ufabc.edu.br 	 200.133.215.142 	 262742
+planet-lab3.uba.ar 	 157.92.44.103 	 3449
+planet-lab4.uba.ar 	 157.92.44.104 	 3449
+planet-plc-1.mpi-sws.org 	 139.19.158.225 	 680
+planet-plc-2.mpi-sws.org 	 139.19.158.227 	 680
+planet-plc-3.mpi-sws.org 	 139.19.158.229 	 680
+planet-plc-4.mpi-sws.org 	 139.19.158.231 	 680
+planet-plc-5.mpi-sws.org 	 139.19.158.233 	 680
+planet-plc-6.mpi-sws.org 	 139.19.158.235 	 680
+planet0.jaist.ac.jp 	 150.65.32.66 	 17932
+planet01.hhi.fraunhofer.de 	 193.174.67.186 	 680
+planet02.hhi.fraunhofer.de 	 193.174.67.187 	 680
+planet1.cc.gt.atl.ga.us 	 143.215.131.206 	 2637
+planet1.cdacb.ernet.in 	 ;; connection timed out; no servers could be reached 	 
+planet1.colbud.hu 	  	 
+planet1.cs.huji.ac.il 	 132.65.240.100 	 378
+planet1.cs.rochester.edu 	 128.151.65.101 	 20
+planet1.dsp.ac.cn 	 210.75.225.60 	 7497
+planet1.elte.hu 	 planet1.onelab.elte.hu.
+157.181.175.249 	 AS
+planet1.inf.tu-dresden.de 	 141.76.45.17 	 680
+planet1.itc.auth.gr 	 155.207.200.83 	 5470
+planet1.jaist.ac.jp 	 150.65.32.68 	 17932
+planet1.ku.edu.tr 	 88.255.99.250 	 9121
+planet1.l3s.uni-hannover.de 	 83.246.92.210 	 24679
+planet1.pnl.nitech.ac.jp 	 133.68.253.242 	 2907
+planet1.scs.cs.nyu.edu 	 216.165.109.81 	 12
+planet1.scs.stanford.edu 	 171.66.3.181 	 32
+planet1.servers.ua.pt 	 planet1.housing.ua.pt.
+193.137.173.217 	 AS
+planet1.unipr.it 	 160.78.253.31 	 137
+planet1.zib.de 	 130.73.241.33 	 680
+planet11.csc.ncsu.edu 	 152.14.93.140 	 11442
+planet12.csc.ncsu.edu 	 152.14.93.139 	 11442
+planet2.cc.gt.atl.ga.us 	 143.215.131.197 	 2637
+planet2.cdacb.ernet.in 	 ;; connection timed out; no servers could be reached 	 
+planet2.colbud.hu 	  	 
+planet2.cs.huji.ac.il 	 132.65.240.101 	 378
+planet2.cs.rochester.edu 	 128.151.65.102 	 20
+planet2.dsp.ac.cn 	 210.75.225.62 	 7497
+planet2.elte.hu 	 planet2.onelab.elte.hu.
+157.181.175.248 	 AS
+planet2.inf.tu-dresden.de 	 141.76.45.18 	 680
+planet2.itc.auth.gr 	 155.207.200.84 	 5470
+planet2.ku.edu.tr 	 88.255.99.251 	 9121
+planet2.l3s.uni-hannover.de 	 83.246.92.212 	 24679
+planet2.pnl.nitech.ac.jp 	 133.68.253.243 	 2907
+planet2.scs.cs.nyu.edu 	 216.165.109.82 	 12
+planet2.scs.stanford.edu 	 171.66.3.182 	 32
+planet2.servers.ua.pt 	 planet2.housing.ua.pt.
+193.137.173.218 	 AS
+planet2.unipr.it 	 160.78.253.32 	 137
+planet2.zib.de 	 130.73.241.34 	 680
+planet3.cc.gt.atl.ga.us 	 143.215.131.198 	 2637
+planet3.cs.ucsb.edu 	 128.111.52.63 	 131
+planet4.cc.gt.atl.ga.us 	 143.215.131.199 	 2637
+planet4.cs.ucsb.edu 	 128.111.52.64 	 131
+planet5.cs.ucsb.edu 	 128.111.52.58 	 131
+planet6.cs.ucsb.edu 	 128.111.52.59 	 131
+planetlab-01.bu.edu 	 204.8.155.226 	 111
+planetlab-01.cs.angelo.edu 	 72.18.165.65 	 36658
+planetlab-01.cs.princeton.edu 	 128.112.139.42 	 88
+planetlab-01.ece.uprm.edu 	 136.145.115.194 	 5786
+planetlab-01.kusa.ac.jp 	 202.244.160.251 	 2500
+planetlab-01.kyushu.jgn2.jp 	  	 
+planetlab-01.naist.jp 	  	 
+planetlab-01.vt.nodes.planet-lab.org 	 198.82.160.238 	 1312
+planetlab-02.bu.edu 	 204.8.155.227 	 111
+planetlab-02.cs.princeton.edu 	 128.112.139.43 	 88
+planetlab-02.ece.uprm.edu 	 136.145.115.196 	 5786
+planetlab-02.kusa.ac.jp 	 202.244.160.252 	 2500
+planetlab-02.kyushu.jgn2.jp 	  	 
+planetlab-02.naist.jp 	  	 
+planetlab-02.vt.nodes.planet-lab.org 	 198.82.160.239 	 1312
+planetlab-03.cs.princeton.edu 	 128.112.139.97 	 88
+planetlab-03.naist.jp 	 163.221.11.73 	 2500
+planetlab-03.vt.nodes.planet-lab.org 	 198.82.160.220 	 1312
+planetlab-04.cs.princeton.edu 	 128.112.139.18 	 88
+planetlab-04.naist.jp 	 163.221.11.74 	 2500
+planetlab-04.vt.nodes.planet-lab.org 	 198.82.160.221 	 1312
+planetlab-1.calpoly-netlab.net 	 208.94.63.193 	 46357
+planetlab-1.cau.ac.kr 	  	 
+planetlab-1.cmcl.cs.cmu.edu 	 128.2.211.113 	 9
+planetlab-1.cs.auckland.ac.nz 	 130.216.1.22 	 9431
+planetlab-1.cs.colostate.edu 	 129.82.12.187 	 12145
+planetlab-1.cs.ucy.ac.cy 	 194.42.17.123 	 3268
+planetlab-1.cs.uic.edu 	 131.193.34.21 	 6200
+planetlab-1.cs.unibas.ch 	 192.43.193.71 	 559
+planetlab-1.cse.ohio-state.edu 	 164.107.127.12 	 159
+planetlab-1.di.fc.ul.pt 	 194.117.20.214 	 1930
+planetlab-1.ece.iastate.edu 	 129.186.205.73 	 2698
+planetlab-1.elisa.cpsc.ucalgary.ca 	 136.159.220.40 	 33091
+planetlab-1.fhi-fokus.de 	 193.175.135.58 	 680
+planetlab-1.ida.liu.se 	 192.36.94.2 	 2843
+planetlab-1.imag.fr 	 129.88.70.226 	 1942
+planetlab-1.imperial.ac.uk 	 193.63.75.18 	 786
+planetlab-1.infotech.monash.edu.my 	 118.139.145.130 	 38280
+planetlab-1.ing.unimo.it 	 155.185.54.249 	 137
+planetlab-1.iscte.pt 	 193.136.191.25 	 1930
+planetlab-1.man.poznan.pl 	 lycium.man.poznan.pl.
+150.254.212.147 	 AS
+planetlab-1.pdl.nudt.edu.cn 	 202.197.15.1 	 4538
+planetlab-1.research.netlab.hut.fi 	 195.148.124.73 	 1741
+planetlab-1.rml.ryerson.ca 	 141.117.68.60 	 26996
+planetlab-1.scie.uestc.edu.cn 	 222.197.180.137 	 4538
+planetlab-1.sjtu.edu.cn 	 202.112.28.98 	 4538
+planetlab-1.ssvl.kth.se 	 192.16.125.11 	 8973
+planetlab-1.sysu.edu.cn 	 202.116.81.194 	 4538
+planetlab-1.tagus.ist.utl.pt 	 193.136.166.66 	 1930
+planetlab-1.unk.edu 	  	 
+planetlab-1.usask.ca 	 128.233.252.11 	 22950
+planetlab-1.vuse.vanderbilt.edu 	 129.59.88.179 	 7212
+planetlab-1.webedu.ccu.edu.tw 	 ;; connection timed out; no servers could be reached 	 
+planetlab-12.e5.ijs.si 	 193.138.2.12 	 2107
+planetlab-13.e5.ijs.si 	 193.138.2.13 	 2107
+planetlab-1a.ics.uci.edu 	  	 
+planetlab-2.calpoly-netlab.net 	 208.94.63.194 	 46357
+planetlab-2.cau.ac.kr 	  	 
+planetlab-2.cmcl.cs.cmu.edu 	 128.2.211.114 	 9
+planetlab-2.cs.auckland.ac.nz 	 130.216.1.23 	 9431
+planetlab-2.cs.colostate.edu 	 129.82.12.188 	 12145
+planetlab-2.cs.uic.edu 	 131.193.34.38 	 6200
+planetlab-2.cs.unibas.ch 	 192.43.193.72 	 559
+planetlab-2.cse.ohio-state.edu 	 164.107.127.13 	 159
+planetlab-2.di.fc.ul.pt 	 194.117.20.215 	 1930
+planetlab-2.ece.iastate.edu 	 129.186.205.71 	 2698
+planetlab-2.elisa.cpsc.ucalgary.ca 	 136.159.220.42 	 33091
+planetlab-2.fhi-fokus.de 	 193.175.135.59 	 680
+planetlab-2.ida.liu.se 	 192.36.94.3 	 2843
+planetlab-2.imag.fr 	 129.88.70.227 	 1942
+planetlab-2.imperial.ac.uk 	 193.63.75.19 	 786
+planetlab-2.infotech.monash.edu.my 	 118.139.145.131 	 38280
+planetlab-2.ing.unimo.it 	 155.185.54.250 	 137
+planetlab-2.iscte.pt 	 193.136.191.26 	 1930
+planetlab-2.man.poznan.pl 	 cercis.man.poznan.pl.
+150.254.212.148 	 AS
+planetlab-2.pdl.nudt.edu.cn 	 202.197.15.3 	 4538
+planetlab-2.research.netlab.hut.fi 	 195.148.124.74 	 1741
+planetlab-2.rml.ryerson.ca 	 141.117.68.62 	 26996
+planetlab-2.scie.uestc.edu.cn 	 222.197.180.139 	 4538
+planetlab-2.sjtu.edu.cn 	 202.112.28.100 	 4538
+planetlab-2.ssvl.kth.se 	 192.16.125.12 	 8973
+planetlab-2.sysu.edu.cn 	 202.116.81.195 	 4538
+planetlab-2.tagus.ist.utl.pt 	 193.136.166.68 	 1930
+planetlab-2.unk.edu 	  	 
+planetlab-2.usask.ca 	 128.233.252.12 	 22950
+planetlab-2.vuse.vanderbilt.edu 	 129.59.88.180 	 7212
+planetlab-2.webedu.ccu.edu.tw 	  	 
+planetlab-2a.ics.uci.edu 	  	 
+planetlab-3.cmcl.cs.cmu.edu 	 128.2.211.115 	 9
+planetlab-3.cs.ucy.ac.cy 	 194.42.17.121 	 3268
+planetlab-3.dis.uniroma1.it 	 151.100.59.13 	 137
+planetlab-3.ece.iastate.edu 	 129.186.205.76 	 2698
+planetlab-3.ics.uci.edu 	 128.195.54.212 	 299
+planetlab-3.imperial.ac.uk 	 193.63.75.20 	 786
+planetlab-3.iscte.pt 	 server1.planetlab02.iscte.pt.
+193.136.191.20 	 AS
+planetlab-4.cs.ucy.ac.cy 	 194.42.17.124 	 3268
+planetlab-4.dis.uniroma1.it 	 151.100.59.9 	 137
+planetlab-4.ece.iastate.edu 	 129.186.205.77 	 2698
+planetlab-4.eecs.cwru.edu 	 129.22.150.29 	 32666
+planetlab-4.imperial.ac.uk 	 193.63.75.21 	 786
+planetlab-4.iscte.pt 	 server2.planetlab02.iscte.pt.
+193.136.191.21 	 AS
+planetlab-5.ece.iastate.edu 	 129.186.205.79 	 2698
+planetlab-5.eecs.cwru.edu 	 129.22.150.78 	 32666
+planetlab-6.ece.iastate.edu 	 129.186.205.78 	 2698
+planetlab-coffee.ait.ie 	 193.1.13.12 	 1213
+planetlab-js1.cert.org.cn 	 218.94.106.112 	 4134
+planetlab-js2.cert.org.cn 	 218.94.106.114 	 4134
+planetlab-n1.wand.net.nz 	 130.217.77.2 	 681
+planetlab-n2.wand.net.nz 	 130.217.77.4 	 681
+planetlab-node-01.ucd.ie 	 193.1.170.135 	 1213
+planetlab-node-02.ucd.ie 	 193.1.170.136 	 1213
+planetlab-node1.it-sudparis.eu 	 157.159.226.72 	 2094
+planetlab-node3.it-sudparis.eu 	 157.159.226.74 	 2094
+planetlab-tea.ait.ie 	 193.1.13.14 	 1213
+planetlab-um00.di.uminho.pt 	 193.136.19.13 	 1930
+planetlab-um10.di.uminho.pt 	 193.136.19.29 	 1930
+planetlab0.dojima.wide.ad.jp 	 203.178.133.10 	 2500
+planetlab0.ias.csusb.edu 	 139.182.137.140 	 2152
+planetlab0.otemachi.wide.ad.jp 	 203.178.133.2 	 2500
+planetlab0.ucsc.cmb.ac.lk 	 192.248.16.111 	 38229
+planetlab01.alucloud.com 	 135.109.221.103 	 7345
+planetlab01.cs.tcd.ie 	 134.226.52.34 	 1213
+planetlab01.cs.washington.edu 	 128.208.4.197 	 73
+planetlab01.dis.unina.it 	 143.225.229.236 	 137
+planetlab01.erin.utoronto.ca 	 142.150.3.77 	 239
+planetlab01.ethz.ch 	 192.33.90.195 	 559
+planetlab01.lums.edu.pk 	 203.135.63.184 	 17557
+planetlab01.sys.virginia.edu 	 128.143.6.134 	 225
+planetlab01.tkn.tu-berlin.de 	 130.149.49.136 	 680
+planetlab01.uncc.edu 	  	 
+planetlab02.alucloud.com 	 135.109.221.104 	 7345
+planetlab02.cnds.unibe.ch 	 130.92.70.252 	 559
+planetlab02.cs.tcd.ie 	 134.226.52.35 	 1213
+planetlab02.cs.washington.edu 	 128.208.4.198 	 73
+planetlab02.dis.unina.it 	 143.225.229.238 	 137
+planetlab02.erin.utoronto.ca 	 142.150.3.78 	 239
+planetlab02.ethz.ch 	 192.33.90.196 	 559
+planetlab02.just.edu.jo 	 www.planetlab02.just.edu.jo.
+87.236.232.174 	 AS
+planetlab02.lums.edu.pk 	 203.135.63.185 	 17557
+planetlab02.sys.virginia.edu 	 128.143.6.130 	 225
+planetlab02.tkn.tu-berlin.de 	 130.149.49.137 	 680
+planetlab02.uncc.edu 	  	 
+planetlab03.cnds.unibe.ch 	 130.92.70.253 	 559
+planetlab03.cs.washington.edu 	 128.208.4.199 	 73
+planetlab03.uncc.edu 	 152.15.253.191 	 81
+planetlab04.cnds.unibe.ch 	 130.92.70.254 	 559
+planetlab04.cs.washington.edu 	 128.208.4.99 	 73
+planetlab04.uncc.edu 	 152.15.253.190 	 81
+planetlab05.cs.washington.edu 	 128.208.3.180 	 73
+planetlab06.cs.washington.edu 	 128.208.3.184 	 73
+planetlab1-buenosaires.lan.redclara.net 	 200.0.206.168 	 27750
+planetlab1-santiago.lan.redclara.net 	 200.0.206.202 	 27750
+planetlab1-saopaulo.lan.redclara.net 	 200.0.206.136 	 27750
+planetlab1-tijuana.lan.redclara.net 	 200.0.206.12 	 27750
+planetlab1.acis.ufl.edu 	 128.227.150.11 	 6356
+planetlab1.arizona-gigapop.net 	 206.207.248.34 	 1706
+planetlab1.aston.ac.uk 	 134.151.255.180 	 786
+planetlab1.aub.edu.lb 	  	 
+planetlab1.aut.ac.nz 	 156.62.231.242 	 24398
+planetlab1.bgu.ac.il 	 132.72.23.10 	 378
+planetlab1.buaa.edu.cn 	 202.112.128.10 	 4538
+planetlab1.bupt.edu.cn 	 211.68.70.34 	 4538
+planetlab1.byu.edu 	 128.187.223.211 	 6510
+planetlab1.c3sl.ufpr.br 	 200.17.202.194 	 10881
+planetlab1.cesnet.cz 	 195.113.161.82 	 2852
+planetlab1.ci.pwr.wroc.pl 	 planetlab1.ii.pwr.wroc.pl.
+156.17.10.51 	 AS
+planetlab1.cis.upenn.edu 	 158.130.6.254 	 55
+planetlab1.citadel.edu 	 155.225.2.71 	 53257
+planetlab1.clemson.edu 	 130.127.39.152 	 12148
+planetlab1.cnds.jhu.edu 	 128.220.231.2 	 5723
+planetlab1.cnis.nyit.edu 	 108.58.13.205 	 6128
+planetlab1.cnu.ac.kr 	  	 
+planetlab1.comp.nus.edu.sg 	 137.132.80.106 	 7472
+planetlab1.cqupt.edu.cn 	 202.202.43.198 	 4538
+planetlab1.cs.aueb.gr 	 cslab180.cs.aueb.gr.
+195.251.248.180 	 AS
+planetlab1.cs.colorado.edu 	 128.138.207.54 	 104
+planetlab1.cs.columbia.edu 	 128.59.20.226 	 14
+planetlab1.cs.cornell.edu 	 128.84.154.40 	 26
+planetlab1.cs.dartmouth.edu 	  	 
+planetlab1.cs.du.edu 	 130.253.21.121 	 14041
+planetlab1.cs.duke.edu 	 152.3.138.1 	 13371
+planetlab1.cs.okstate.edu 	 139.78.141.243 	 5078
+planetlab1.cs.otago.ac.nz 	 139.80.206.132 	 38305
+planetlab1.cs.pitt.edu 	 192.52.240.213 	 4130
+planetlab1.cs.purdue.edu 	 128.10.18.52 	 17
+planetlab1.cs.stevens-tech.edu 	 155.246.12.163 	 16889
+planetlab1.cs.ubc.ca 	 142.103.2.1 	 393249
+planetlab1.cs.uchicago.edu 	  	 
+planetlab1.cs.ucl.ac.uk 	 193.63.58.70 	 786
+planetlab1.cs.ucla.edu 	 131.179.150.70 	 52
+planetlab1.cs.uit.no 	 129.242.19.196 	 224
+planetlab1.cs.uiuc.edu 	 72.36.112.71 	 38
+planetlab1.cs.umass.edu 	 128.119.247.251 	 1249
+planetlab1.cs.umb.edu 	 158.121.252.20 	 1968
+planetlab1.cs.uml.edu 	 129.63.159.101 	 46905
+planetlab1.cs.unb.ca 	  	 
+planetlab1.cs.unc.edu 	 planetlab1.telenet.unc.edu.
+204.85.191.10 	 AS
+planetlab1.cs.uoi.gr 	 195.130.121.204 	 5408
+planetlab1.cs.uoregon.edu 	 128.223.8.111 	 3582
+planetlab1.cs.vu.nl 	 planetlab1.labs.vu.nl.
+130.37.193.141 	 AS
+planetlab1.cs.wayne.edu 	 141.217.48.50 	 237
+planetlab1.csail.mit.edu 	 128.31.1.11 	 3
+planetlab1.cse.msu.edu 	 35.9.27.26 	 237
+planetlab1.cse.nd.edu 	 129.74.74.15 	 693
+planetlab1.csee.usf.edu 	 131.247.2.241 	 5661
+planetlab1.csg.uzh.ch 	 192.41.136.218 	 559
+planetlab1.csie.nuk.edu.tw 	 140.127.208.238 	 1659
+planetlab1.csres.utexas.edu 	 128.83.122.179 	 18
+planetlab1.csuohio.edu 	 137.148.16.10 	 32818
+planetlab1.cti.espol.edu.ec 	 200.10.150.252 	 28027
+planetlab1.cyfronet.pl 	 149.156.5.114 	 8267
+planetlab1.di.fct.unl.pt 	 193.136.124.3 	 1930
+planetlab1.di.unito.it 	 130.192.157.131 	 137
+planetlab1.diku.dk 	 planetlab1.distlab.diku.dk.
+amigos13.distlab.diku.dk.
+192.38.109.143 	 Error:
+planetlab1.dit.upm.es 	 138.4.0.119 	 766
+planetlab1.dojima.wide.ad.jp 	 203.178.133.11 	 2500
+planetlab1.dtc.umn.edu 	 146.57.249.98 	 57
+planetlab1.eas.asu.edu 	 149.169.227.129 	 2900
+planetlab1.ece.ucdavis.edu 	 169.237.79.210 	 6192
+planetlab1.ecs.vuw.ac.nz 	 130.195.4.68 	 23905
+planetlab1.eecs.jacobs-university.de 	 212.201.44.81 	 680
+planetlab1.eecs.northwestern.edu 	 129.105.15.36 	 103
+planetlab1.eecs.ucf.edu 	 132.170.3.32 	 7939
+planetlab1.eecs.umich.edu 	 141.213.4.201 	 36375
+planetlab1.eecs.wsu.edu 	 134.121.64.4 	 11827
+planetlab1.eee.hku.hk 	 202.189.126.85 	 4528
+planetlab1.een.orst.edu 	  	 
+planetlab1.elet.polimi.it 	 131.175.17.9 	 137
+planetlab1.engr.ccny.cuny.edu 	 134.74.248.5 	 31822
+planetlab1.engr.uconn.edu 	 137.99.11.86 	 22742
+planetlab1.esprit-tn.com 	 41.225.7.3 	 2609
+planetlab1.eurecom.fr 	 193.55.112.40 	 2200
+planetlab1.ewi.tudelft.nl 	 130.161.40.153 	 1128
+planetlab1.exp-math.uni-essen.de 	 132.252.152.193 	 680
+planetlab1.extern.kuleuven.be 	 193.190.168.49 	 2611
+planetlab1.fct.ualg.pt 	 193.136.227.163 	 1930
+planetlab1.fit.vutbr.cz 	 147.229.8.26 	 197451
+planetlab1.fri.uni-lj.si 	 212.235.189.114 	 2107
+planetlab1.gdansk.rd.tp.pl 	  	 
+planetlab1.georgetown.edu 	 141.161.20.32 	 11318
+planetlab1.hiit.fi 	 193.167.187.187 	 1741
+planetlab1.homelinux.org 	  	 
+planetlab1.hust.edu.cn 	 211.69.207.32 	 4538
+planetlab1.ias.csusb.edu 	 139.182.137.141 	 2152
+planetlab1.ics.forth.gr 	 139.91.90.238 	 8522
+planetlab1.ie.cuhk.edu.hk 	 137.189.98.208 	 3661
+planetlab1.ifi.uio.no 	 193.157.115.250 	 224
+planetlab1.iii.u-tokyo.ac.jp 	 133.11.240.56 	 2501
+planetlab1.iiitb.ac.in 	 164.164.104.162 	 7633
+planetlab1.iin-bit.com.cn 	  	 
+planetlab1.iis.sinica.edu.tw 	 140.109.17.180 	 9264
+planetlab1.iitb.ac.in 	  	 
+planetlab1.iitkgp.ac.in 	 203.110.240.190 	 55847
+planetlab1.iitr.ernet.in 	 103.37.200.181 	 131226
+planetlab1.imp.fu-berlin.de 	 130.133.116.2 	 680
+planetlab1.inf.ethz.ch 	 planetlab1.ethz.ch.
+192.33.90.66 	 AS
+planetlab1.informatik.uni-erlangen.de 	 131.188.44.100 	 680
+planetlab1.informatik.uni-goettingen.de 	 planetlab1.extra.informatik.uni-goettingen.de.
+134.76.249.229 	 AS
+planetlab1.informatik.uni-wuerzburg.de 	 132.187.230.1 	 680
+planetlab1.ionio.gr 	 195.130.124.1 	 5408
+planetlab1.it.uts.edu.au 	 138.25.15.194 	 7575
+planetlab1.jcp-consult.net 	 80.65.237.10 	 13193
+planetlab1.jhu.edu 	 128.220.251.50 	 5723
+planetlab1.just.edu.jo 	 www.planetlab1.just.edu.jo.
+87.236.232.153 	 AS
+planetlab1.keldysh.ru 	 217.9.80.144 	 25371
+planetlab1.koganei.itrc.net 	 133.69.32.131 	 7660
+planetlab1.kreonet.net 	 203.230.7.201 	 NA
+planetlab1.lsd.ufcg.edu.br 	  	 
+planetlab1.lublin.rd.tp.pl 	 195.116.60.209 	 29535
+planetlab1.millennium.berkeley.edu 	 169.229.50.3 	 25
+planetlab1.mini.pw.edu.pl 	 194.29.178.5 	 12464
+planetlab1.mnlab.cti.depaul.edu 	 140.192.249.203 	 20130
+planetlab1.montefiore.ulg.ac.be 	 139.165.12.211 	 2611
+planetlab1.mta.ac.il 	 212.199.61.203 	 9116
+planetlab1.n.info.eng.osaka-cu.ac.jp 	 160.193.163.101 	 2907
+planetlab1.nakao-lab.org 	 202.237.248.221 	 NA
+planetlab1.net.in.tum.de 	 138.246.253.1 	 12816
+planetlab1.netlab.uky.edu 	 128.163.142.20 	 10437
+planetlab1.netmedia.gist.ac.kr 	 210.125.84.41 	 1237
+planetlab1.nileu.edu.eg 	  	 
+planetlab1.nowogrodzka.rd.tp.pl 	 195.116.60.145 	 29535
+planetlab1.nrl.eecs.qmul.ac.uk 	 194.36.10.160 	 198864
+planetlab1.ntu.nodes.planet-lab.org 	 140.112.107.80 	 17716
+planetlab1.otemachi.wide.ad.jp 	 203.178.133.3 	 2500
+planetlab1.piotrkow.rd.tp.pl 	  	 
+planetlab1.pjwstk.edu.pl 	 148.81.140.193 	 1887
+planetlab1.plab.ege.edu.tr 	 155.223.52.1 	 2592
+planetlab1.polito.it 	 130.192.9.230 	 137
+planetlab1.poly.edu 	 128.238.88.64 	 46887
+planetlab1.pop-ce.rnp.br 	 200.129.0.161 	 1916
+planetlab1.pop-mg.rnp.br 	 200.19.159.34 	 1916
+planetlab1.pop-pa.rnp.br 	 200.129.132.18 	 1916
+planetlab1.pop-rj.rnp.br 	 200.159.255.70 	 1916
+planetlab1.pop-rs.rnp.br 	 200.132.1.4 	 2716
+planetlab1.postel.org 	 206.117.37.4 	 4
+planetlab1.poznan.rd.tp.pl 	  	 
+planetlab1.rd.tut.fi 	 193.166.167.4 	 1741
+planetlab1.rdfrancetelecom.com 	  	 
+planetlab1.research.nicta.com.au 	 221.199.217.144 	 7575
+planetlab1.ru.is 	 130.208.242.1 	 15474
+planetlab1.rutgers.edu 	 165.230.49.114 	 46
+planetlab1.s3.kth.se 	 130.237.50.124 	 1653
+planetlab1.science.unitn.it 	 193.205.215.74 	 137
+planetlab1.sfc.wide.ad.jp 	 203.178.143.10 	 2500
+planetlab1.sics.se 	 193.10.64.35 	 1653
+planetlab1.simula.no 	 128.39.36.26 	 224
+planetlab1.singaren.net.sg 	 203.30.39.240 	 23855
+planetlab1.swidnik.rd.tp.pl 	 195.116.60.49 	 29535
+planetlab1.tamu.edu 	 165.91.55.8 	 3794
+planetlab1.tau.ac.il 	 192.114.4.2 	 378
+planetlab1.temple.edu 	 129.32.84.160 	 3778
+planetlab1.thlab.net 	 141.11.0.165 	 12910
+planetlab1.tlm.unavarra.es 	 130.206.158.138 	 766
+planetlab1.tmit.bme.hu 	 152.66.245.161 	 2547
+planetlab1.tsuniv.edu 	 206.23.240.28 	 19956
+planetlab1.u-strasbg.fr 	 130.79.48.55 	 2259
+planetlab1.uc.edu 	 129.137.253.253 	 20126
+planetlab1.uc3m.es 	 163.117.253.22 	 766
+planetlab1.ucsc.cmb.ac.lk 	 192.248.16.112 	 38229
+planetlab1.ucsd.edu 	 132.239.17.224 	 7377
+planetlab1.um.es 	 155.54.81.67 	 766
+planetlab1.umassd.edu 	 134.88.5.251 	 1968
+planetlab1.unineuchatel.ch 	 192.42.43.22 	 559
+planetlab1.unl.edu 	 129.93.229.138 	 7896
+planetlab1.unr.edu 	 134.197.113.3 	 3851
+planetlab1.upc.es 	 147.83.30.166 	 13041
+planetlab1.upm.ro 	 193.226.19.30 	 2614
+planetlab1.urv.cat 	 193.144.21.130 	 766
+planetlab1.ustc.edu.cn 	 202.141.161.43 	 4134
+planetlab1.uta.edu 	 129.107.35.131 	 18515
+planetlab1.utdallas.edu 	 129.110.125.51 	 20162
+planetlab1.utep.edu 	  	 
+planetlab1.utt.fr 	 194.254.215.11 	 2200
+planetlab1.virtues.fi 	 pan0076.panoulu.net.
+85.23.168.76 	 AS
+planetlab1.warsaw.rd.tp.pl 	 195.116.53.11 	 29535
+planetlab1.willab.fi 	 193.166.160.98 	 1741
+planetlab1.williams.edu 	 137.165.1.111 	 11399
+planetlab1.wiwi.hu-berlin.de 	 141.20.103.210 	 680
+planetlab1.xeno.cl.cam.ac.uk 	 128.232.103.201 	 786
+planetlab10.millennium.berkeley.edu 	 169.229.50.12 	 25
+planetlab11.millennium.berkeley.edu 	 169.229.50.13 	 25
+planetlab12.millennium.berkeley.edu 	 169.229.50.14 	 25
+planetlab13.millennium.berkeley.edu 	 169.229.50.15 	 25
+planetlab14.millennium.berkeley.edu 	 169.229.50.16 	 25
+planetlab15.millennium.berkeley.edu 	 169.229.50.17 	 25
+planetlab16.millennium.berkeley.edu 	 169.229.50.18 	 25
+planetlab1lannion.elibel.tm.fr 	 161.106.240.18 	 2200
+planetlab2-buenosaires.lan.redclara.net 	 200.0.206.169 	 27750
+planetlab2-santiago.lan.redclara.net 	 200.0.206.203 	 27750
+planetlab2-saopaulo.lan.redclara.net 	 200.0.206.137 	 27750
+planetlab2-tijuana.lan.redclara.net 	 200.0.206.13 	 27750
+planetlab2.acis.ufl.edu 	 128.227.150.12 	 6356
+planetlab2.arizona-gigapop.net 	 206.207.248.35 	 1706
+planetlab2.aston.ac.uk 	 134.151.255.181 	 786
+planetlab2.aub.edu.lb 	  	 
+planetlab2.aut.ac.nz 	 156.62.231.244 	 24398
+planetlab2.bgu.ac.il 	 132.72.23.11 	 378
+planetlab2.buaa.edu.cn 	 202.112.128.11 	 4538
+planetlab2.bupt.edu.cn 	 211.68.70.36 	 4538
+planetlab2.byu.edu 	 128.187.223.212 	 6510
+planetlab2.c3sl.ufpr.br 	 200.17.202.195 	 10881
+planetlab2.cesnet.cz 	 195.113.161.83 	 2852
+planetlab2.ci.pwr.wroc.pl 	 planetlab2.ii.pwr.wroc.pl.
+156.17.10.52 	 AS
+planetlab2.cis.upenn.edu 	 158.130.6.253 	 55
+planetlab2.citadel.edu 	 155.225.2.72 	 53257
+planetlab2.clemson.edu 	 130.127.39.153 	 12148
+planetlab2.cnds.jhu.edu 	 128.220.231.3 	 5723
+planetlab2.cnis.nyit.edu 	 108.58.13.206 	 6128
+planetlab2.comp.nus.edu.sg 	 137.132.80.105 	 7472
+planetlab2.cqupt.edu.cn 	 202.202.43.199 	 4538
+planetlab2.cs.aueb.gr 	 cslab181.cs.aueb.gr.
+195.251.248.181 	 AS
+planetlab2.cs.colorado.edu 	 128.138.207.45 	 104
+planetlab2.cs.columbia.edu 	 128.59.20.227 	 14
+planetlab2.cs.cornell.edu 	 128.84.154.41 	 26
+planetlab2.cs.dartmouth.edu 	  	 
+planetlab2.cs.du.edu 	 130.253.21.123 	 14041
+planetlab2.cs.duke.edu 	 152.3.138.2 	 13371
+planetlab2.cs.okstate.edu 	 139.78.141.245 	 5078
+planetlab2.cs.otago.ac.nz 	 139.80.206.133 	 38305
+planetlab2.cs.pitt.edu 	 192.52.240.214 	 4130
+planetlab2.cs.purdue.edu 	 128.10.18.53 	 17
+planetlab2.cs.stevens-tech.edu 	 155.246.12.164 	 16889
+planetlab2.cs.ubc.ca 	 142.103.2.2 	 393249
+planetlab2.cs.uchicago.edu 	  	 
+planetlab2.cs.ucl.ac.uk 	 193.63.58.71 	 786
+planetlab2.cs.ucla.edu 	 131.179.150.72 	 52
+planetlab2.cs.uit.no 	 129.242.19.197 	 224
+planetlab2.cs.uiuc.edu 	 72.36.112.72 	 38
+planetlab2.cs.umass.edu 	 128.119.247.250 	 1249
+planetlab2.cs.umb.edu 	 158.121.252.21 	 1968
+planetlab2.cs.uml.edu 	 129.63.159.102 	 46905
+planetlab2.cs.unb.ca 	  	 
+planetlab2.cs.unc.edu 	 planetlab2.telenet.unc.edu.
+204.85.191.11 	 AS
+planetlab2.cs.uoi.gr 	 195.130.121.205 	 5408
+planetlab2.cs.uoregon.edu 	 128.223.8.112 	 3582
+planetlab2.cs.vu.nl 	 planetlab2.labs.vu.nl.
+130.37.193.143 	 AS
+planetlab2.cs.wayne.edu 	 141.217.48.51 	 237
+planetlab2.csail.mit.edu 	 128.31.1.12 	 3
+planetlab2.cse.msu.edu 	 35.9.27.27 	 237
+planetlab2.cse.nd.edu 	 129.74.74.16 	 693
+planetlab2.csee.usf.edu 	 131.247.2.242 	 5661
+planetlab2.csg.uzh.ch 	 192.41.136.219 	 559
+planetlab2.csie.nuk.edu.tw 	 140.127.208.239 	 1659
+planetlab2.csres.utexas.edu 	 128.83.122.180 	 18
+planetlab2.csuohio.edu 	 137.148.16.11 	 32818
+planetlab2.cti.espol.edu.ec 	 200.10.150.253 	 28027
+planetlab2.cyfronet.pl 	 149.156.5.116 	 8267
+planetlab2.di.fct.unl.pt 	 193.136.124.5 	 1930
+planetlab2.di.unito.it 	 130.192.157.132 	 137
+planetlab2.diku.dk 	 planetlab2.distlab.diku.dk.
+amigos14.distlab.diku.dk.
+192.38.109.144 	 Error:
+planetlab2.dit.upm.es 	 138.4.0.120 	 766
+planetlab2.dtc.umn.edu 	 146.57.249.99 	 57
+planetlab2.eas.asu.edu 	 149.169.227.131 	 2900
+planetlab2.ece.ucdavis.edu 	 169.237.79.211 	 6192
+planetlab2.ecs.vuw.ac.nz 	 130.195.4.69 	 23905
+planetlab2.eecs.jacobs-university.de 	 212.201.44.82 	 680
+planetlab2.eecs.northwestern.edu 	 129.105.15.37 	 103
+planetlab2.eecs.ucf.edu 	 132.170.3.33 	 7939
+planetlab2.eecs.umich.edu 	 141.213.4.202 	 36375
+planetlab2.eecs.wsu.edu 	 134.121.64.7 	 11827
+planetlab2.eee.hku.hk 	 202.189.126.86 	 4528
+planetlab2.een.orst.edu 	  	 
+planetlab2.engr.ccny.cuny.edu 	 134.74.248.6 	 31822
+planetlab2.engr.uconn.edu 	 137.99.11.87 	 22742
+planetlab2.esprit-tn.com 	 41.225.7.4 	 2609
+planetlab2.eurecom.fr 	 193.55.112.41 	 2200
+planetlab2.ewi.tudelft.nl 	 130.161.40.154 	 1128
+planetlab2.exp-math.uni-essen.de 	 132.252.152.194 	 680
+planetlab2.extern.kuleuven.be 	 193.190.168.51 	 2611
+planetlab2.fct.ualg.pt 	 193.136.227.164 	 1930
+planetlab2.fri.uni-lj.si 	 212.235.189.115 	 2107
+planetlab2.gdansk.rd.tp.pl 	  	 
+planetlab2.georgetown.edu 	 141.161.20.33 	 11318
+planetlab2.hiit.fi 	 193.167.187.188 	 1741
+planetlab2.hust.edu.cn 	 211.69.207.34 	 4538
+planetlab2.ics.forth.gr 	 139.91.90.239 	 8522
+planetlab2.ie.cuhk.edu.hk 	 137.189.98.213 	 3661
+planetlab2.ifi.uio.no 	 193.157.115.251 	 224
+planetlab2.iii.u-tokyo.ac.jp 	 133.11.240.57 	 2501
+planetlab2.iiitb.ac.in 	 164.164.104.163 	 7633
+planetlab2.iiitd.edu.in 	 103.25.231.42 	 55824
+planetlab2.iin-bit.com.cn 	  	 
+planetlab2.iis.sinica.edu.tw 	 140.109.17.181 	 9264
+planetlab2.iitb.ac.in 	  	 
+planetlab2.iitkgp.ac.in 	 203.110.240.191 	 55847
+planetlab2.iitr.ernet.in 	 103.37.200.182 	 131226
+planetlab2.imp.fu-berlin.de 	 130.133.116.3 	 680
+planetlab2.inf.ethz.ch 	 planetlab2.ethz.ch.
+192.33.90.67 	 AS
+planetlab2.informatik.uni-erlangen.de 	 131.188.44.101 	 680
+planetlab2.informatik.uni-goettingen.de 	 planetlab2.extra.informatik.uni-goettingen.de.
+134.76.249.230 	 AS
+planetlab2.informatik.uni-wuerzburg.de 	 132.187.230.2 	 680
+planetlab2.ionio.gr 	 195.130.124.2 	 5408
+planetlab2.it.uts.edu.au 	 138.25.15.195 	 7575
+planetlab2.jcp-consult.net 	 80.65.237.11 	 13193
+planetlab2.jhu.edu 	 128.220.251.52 	 5723
+planetlab2.keldysh.ru 	 217.9.80.145 	 25371
+planetlab2.koganei.itrc.net 	 133.69.32.133 	 7660
+planetlab2.kreonet.net 	 203.230.7.202 	 NA
+planetlab2.lsd.ufcg.edu.br 	  	 
+planetlab2.lublin.rd.tp.pl 	 195.116.60.210 	 29535
+planetlab2.millennium.berkeley.edu 	 169.229.50.4 	 25
+planetlab2.mini.pw.edu.pl 	 194.29.178.6 	 12464
+planetlab2.mnlab.cti.depaul.edu 	 140.192.249.204 	 20130
+planetlab2.montefiore.ulg.ac.be 	 139.165.12.212 	 2611
+planetlab2.mta.ac.il 	 212.199.61.205 	 9116
+planetlab2.n.info.eng.osaka-cu.ac.jp 	 160.193.163.102 	 2907
+planetlab2.nakao-lab.org 	 202.237.248.222 	 NA
+planetlab2.netlab.uky.edu 	 128.163.142.21 	 10437
+planetlab2.netmedia.gist.ac.kr 	 210.125.84.42 	 1237
+planetlab2.nileu.edu.eg 	  	 
+planetlab2.nowogrodzka.rd.tp.pl 	 195.116.60.146 	 29535
+planetlab2.nrl.eecs.qmul.ac.uk 	 194.36.10.161 	 198864
+planetlab2.ntu.nodes.planet-lab.org 	 140.112.107.82 	 17716
+planetlab2.olsztyn.rd.tp.pl 	 195.116.60.34 	 29535
+planetlab2.piotrkow.rd.tp.pl 	  	 
+planetlab2.pjwstk.edu.pl 	 148.81.140.194 	 1887
+planetlab2.plab.ege.edu.tr 	 155.223.52.3 	 2592
+planetlab2.polito.it 	 130.192.9.231 	 137
+planetlab2.poly.edu 	 128.238.88.65 	 46887
+planetlab2.pop-ce.rnp.br 	 200.129.0.162 	 1916
+planetlab2.pop-mg.rnp.br 	 200.19.159.35 	 1916
+planetlab2.pop-pa.rnp.br 	 200.129.132.19 	 1916
+planetlab2.pop-rj.rnp.br 	 200.159.255.80 	 1916
+planetlab2.pop-rs.rnp.br 	 200.132.1.6 	 2716
+planetlab2.postel.org 	 206.117.37.5 	 4
+planetlab2.poznan.rd.tp.pl 	  	 
+planetlab2.rd.tut.fi 	 193.166.167.5 	 1741
+planetlab2.rdfrancetelecom.com 	  	 
+planetlab2.research.nicta.com.au 	 221.199.217.145 	 7575
+planetlab2.ru.is 	 130.208.242.2 	 15474
+planetlab2.rutgers.edu 	 165.230.49.115 	 46
+planetlab2.s3.kth.se 	 130.237.50.125 	 1653
+planetlab2.science.unitn.it 	 193.205.215.75 	 137
+planetlab2.sfc.wide.ad.jp 	 203.178.143.28 	 2500
+planetlab2.sics.se 	 193.10.64.36 	 1653
+planetlab2.simula.no 	 128.39.36.27 	 224
+planetlab2.singaren.net.sg 	 203.30.39.241 	 23855
+planetlab2.tamu.edu 	 165.91.55.9 	 3794
+planetlab2.tau.ac.il 	 192.114.4.3 	 378
+planetlab2.temple.edu 	 129.32.84.161 	 3778
+planetlab2.thlab.net 	 141.11.0.162 	 12910
+planetlab2.tlm.unavarra.es 	 130.206.158.140 	 766
+planetlab2.tmit.bme.hu 	 152.66.245.162 	 2547
+planetlab2.tsuniv.edu 	 206.23.240.29 	 19956
+planetlab2.u-strasbg.fr 	 130.79.48.57 	 2259
+planetlab2.uc.edu 	 129.137.253.252 	 20126
+planetlab2.uc3m.es 	 163.117.253.23 	 766
+planetlab2.ucsd.edu 	 132.239.17.225 	 7377
+planetlab2.um.es 	 155.54.81.68 	 766
+planetlab2.umassd.edu 	 134.88.5.253 	 1968
+planetlab2.unineuchatel.ch 	 192.42.43.23 	 559
+planetlab2.unl.edu 	 129.93.229.139 	 7896
+planetlab2.unr.edu 	 134.197.113.4 	 3851
+planetlab2.upc.es 	 147.83.30.167 	 13041
+planetlab2.upm.ro 	 193.226.19.31 	 2614
+planetlab2.urv.cat 	 193.144.21.131 	 766
+planetlab2.ustc.edu.cn 	 202.141.161.44 	 4134
+planetlab2.uta.edu 	 129.107.35.132 	 18515
+planetlab2.utdallas.edu 	 129.110.125.52 	 20162
+planetlab2.utep.edu 	  	 
+planetlab2.utt.fr 	 194.254.215.12 	 2200
+planetlab2.virtues.fi 	 pan0077.panoulu.net.
+85.23.168.77 	 AS
+planetlab2.willab.fi 	 193.166.160.99 	 1741
+planetlab2.williams.edu 	 137.165.1.112 	 11399
+planetlab2.wiwi.hu-berlin.de 	 141.20.103.211 	 680
+planetlab2.xeno.cl.cam.ac.uk 	 128.232.103.202 	 786
+planetlab2lannion.elibel.tm.fr 	 161.106.240.19 	 2200
+planetlab3.arizona-gigapop.net 	 206.207.248.38 	 1706
+planetlab3.bupt.edu.cn 	 211.68.70.40 	 4538
+planetlab3.canterbury.ac.nz 	 132.181.10.56 	 9432
+planetlab3.cesnet.cz 	 195.113.161.84 	 2852
+planetlab3.cnds.jhu.edu 	 128.220.231.4 	 5723
+planetlab3.comp.nus.edu.sg 	 137.132.80.110 	 7472
+planetlab3.cs.columbia.edu 	 128.59.20.228 	 14
+planetlab3.cs.cornell.edu 	 128.84.154.42 	 26
+planetlab3.cs.duke.edu 	 152.3.138.3 	 13371
+planetlab3.cs.st-andrews.ac.uk 	 138.251.214.77 	 786
+planetlab3.cs.uchicago.edu 	  	 
+planetlab3.cs.uiuc.edu 	 72.36.112.73 	 38
+planetlab3.cs.uoregon.edu 	 128.223.8.113 	 3582
+planetlab3.csail.mit.edu 	 128.31.1.13 	 3
+planetlab3.cse.nd.edu 	 129.74.74.20 	 693
+planetlab3.csee.usf.edu 	 131.247.2.247 	 5661
+planetlab3.cslab.ece.ntua.gr 	 147.102.3.113 	 3323
+planetlab3.csres.utexas.edu 	 128.83.122.181 	 18
+planetlab3.di.unito.it 	 130.192.157.138 	 137
+planetlab3.eecs.northwestern.edu 	 129.105.15.38 	 103
+planetlab3.eecs.umich.edu 	 141.212.113.178 	 36375
+planetlab3.georgetown.edu 	 209.148.46.135 	 11557
+planetlab3.gmf.ufcg.edu.br 	  	 
+planetlab3.hiit.fi 	 193.167.187.185 	 1741
+planetlab3.inf.ethz.ch 	 planetlab3.ethz.ch.
+192.33.90.68 	 AS
+planetlab3.informatik.uni-erlangen.de 	 131.188.44.102 	 680
+planetlab3.millennium.berkeley.edu 	 169.229.50.5 	 25
+planetlab3.mini.pw.edu.pl 	 194.29.178.13 	 12464
+planetlab3.n.info.eng.osaka-cu.ac.jp 	 160.193.163.105 	 2907
+planetlab3.net.in.tum.de 	 138.246.253.3 	 12816
+planetlab3.netmedia.gist.ac.kr 	 210.125.84.43 	 1237
+planetlab3.piotrkow.rd.tp.pl 	 195.116.60.67 	 29535
+planetlab3.postel.org 	 206.117.37.6 	 4
+planetlab3.poznan.rd.tp.pl 	  	 
+planetlab3.rutgers.edu 	 165.230.49.118 	 46
+planetlab3.singaren.net.sg 	 203.30.39.242 	 23855
+planetlab3.tamu.edu 	 165.91.55.10 	 3794
+planetlab3.ucsd.edu 	 132.239.17.226 	 7377
+planetlab3.upc.es 	 147.83.30.164 	 13041
+planetlab3.wail.wisc.edu 	 198.133.224.147 	 59
+planetlab3.williams.edu 	 137.165.1.113 	 11399
+planetlab3.xeno.cl.cam.ac.uk 	 128.232.103.203 	 786
+planetlab4.bupt.edu.cn 	 211.68.70.42 	 4538
+planetlab4.canterbury.ac.nz 	 132.181.10.57 	 9432
+planetlab4.cnds.jhu.edu 	 128.220.231.5 	 5723
+planetlab4.cs.cornell.edu 	 128.84.154.43 	 26
+planetlab4.cs.duke.edu 	 152.3.138.4 	 13371
+planetlab4.cs.st-andrews.ac.uk 	 138.251.214.78 	 786
+planetlab4.cs.uchicago.edu 	  	 
+planetlab4.cs.uiuc.edu 	 72.36.112.74 	 38
+planetlab4.cs.uoregon.edu 	 128.223.8.114 	 3582
+planetlab4.csail.mit.edu 	 128.31.1.14 	 3
+planetlab4.cse.nd.edu 	 129.74.74.19 	 693
+planetlab4.csee.usf.edu 	 131.247.2.245 	 5661
+planetlab4.cslab.ece.ntua.gr 	 147.102.3.117 	 3323
+planetlab4.csres.utexas.edu 	 128.83.122.161 	 18
+planetlab4.eecs.umich.edu 	 141.212.113.179 	 36375
+planetlab4.flux.utah.edu 	 155.98.35.5 	 17055
+planetlab4.georgetown.edu 	 209.148.46.136 	 11557
+planetlab4.goto.info.waseda.ac.jp 	 133.9.81.164 	 17956
+planetlab4.hiit.fi 	 193.167.187.186 	 1741
+planetlab4.ie.cuhk.edu.hk 	 137.189.98.209 	 3661
+planetlab4.inf.ethz.ch 	 planetlab4.ethz.ch.
+192.33.90.69 	 AS
+planetlab4.millennium.berkeley.edu 	 169.229.50.6 	 25
+planetlab4.mini.pw.edu.pl 	 194.29.178.14 	 12464
+planetlab4.n.info.eng.osaka-cu.ac.jp 	 160.193.163.106 	 2907
+planetlab4.netmedia.gist.ac.kr 	 210.125.84.44 	 1237
+planetlab4.postel.org 	 206.117.37.7 	 4
+planetlab4.poznan.rd.tp.pl 	  	 
+planetlab4.rutgers.edu 	 165.230.49.119 	 46
+planetlab4.singaren.net.sg 	 203.30.39.243 	 23855
+planetlab4.tamu.edu 	 165.91.55.11 	 3794
+planetlab4.wail.wisc.edu 	 198.133.224.149 	 59
+planetlab4.warsaw.rd.tp.pl 	 195.116.53.14 	 29535
+planetlab4.williams.edu 	 137.165.1.114 	 11399
+planetlab5.cs.cornell.edu 	 128.84.154.44 	 26
+planetlab5.cs.duke.edu 	 152.3.138.5 	 13371
+planetlab5.cs.uiuc.edu 	 72.36.112.78 	 38
+planetlab5.csail.mit.edu 	 128.31.1.15 	 3
+planetlab5.csee.usf.edu 	 131.247.2.246 	 5661
+planetlab5.csres.utexas.edu 	 128.83.122.162 	 18
+planetlab5.eecs.umich.edu 	 141.212.113.180 	 36375
+planetlab5.flux.utah.edu 	 155.98.35.6 	 17055
+planetlab5.goto.info.waseda.ac.jp 	 133.9.81.165 	 17956
+planetlab5.ie.cuhk.edu.hk 	 137.189.98.210 	 3661
+planetlab5.millennium.berkeley.edu 	 169.229.50.7 	 25
+planetlab5.williams.edu 	 137.165.1.115 	 11399
+planetlab6.cs.cornell.edu 	 128.84.154.45 	 26
+planetlab6.cs.duke.edu 	 152.3.138.6 	 13371
+planetlab6.cs.uiuc.edu 	 72.36.112.79 	 38
+planetlab6.csail.mit.edu 	 128.31.1.16 	 3
+planetlab6.csee.usf.edu 	 131.247.2.248 	 5661
+planetlab6.csres.utexas.edu 	 128.83.122.143 	 18
+planetlab6.flux.utah.edu 	 155.98.35.7 	 17055
+planetlab6.goto.info.waseda.ac.jp 	 133.9.81.166 	 17956
+planetlab6.millennium.berkeley.edu 	 169.229.50.8 	 25
+planetlab7.cs.duke.edu 	 152.3.138.7 	 13371
+planetlab7.csail.mit.edu 	 128.31.1.17 	 3
+planetlab7.csres.utexas.edu 	 128.83.122.152 	 18
+planetlab7.flux.utah.edu 	 155.98.35.8 	 17055
+planetlab7.millennium.berkeley.edu 	 169.229.50.9 	 25
+planetlab8.millennium.berkeley.edu 	 169.229.50.10 	 25
+planetlab9.millennium.berkeley.edu 	 169.229.50.11 	 25
+planetlabeu-1.tssg.org 	 193.1.201.26 	 1213
+planetlabeu-2.tssg.org 	 193.1.201.27 	 1213
+planetlabnode-1.docomolabs-usa.com 	 216.98.102.29 	 2497
+planetlabnode-2.docomolabs-usa.com 	 216.98.102.30 	 2497
+planetlabone.ccs.neu.edu 	 129.10.120.193 	 156
+planetlabpc0.upf.edu 	 193.145.46.243 	 766
+planetlabpc1.upf.edu 	 193.145.46.242 	 766
+planetlabtwo.ccs.neu.edu 	 129.10.120.194 	 156
+planetslug4.cse.ucsc.edu 	 128.114.63.63 	 5739
+planetslug5.cse.ucsc.edu 	 128.114.63.64 	 5739
+planetslug7.cse.ucsc.edu 	 128.114.63.15 	 5739
+planetvs1.informatik.uni-stuttgart.de 	 129.69.210.96 	 553
+planetvs2.informatik.uni-stuttgart.de 	 129.69.210.97 	 553
+planetx.scs.cs.nyu.edu 	 216.165.109.79 	 12
+ple01.fc.univie.ac.at 	 131.130.69.162 	 760
+ple02.fc.univie.ac.at 	 131.130.69.164 	 760
+ple1.ait.ac.th 	 203.159.63.249 	 4767
+ple1.cesnet.cz 	 195.113.161.13 	 2852
+ple1.dmcs.p.lodz.pl 	 212.51.218.235 	 8256
+ple1.tu.koszalin.pl 	 62.108.171.74 	 28678
+ple1.zcu.cz 	 147.228.54.116 	 2852
+ple2.ait.ac.th 	 203.159.63.250 	 4767
+ple2.cesnet.cz 	 195.113.161.14 	 2852
+ple2.dmcs.p.lodz.pl 	 212.51.218.237 	 8256
+ple2.ipv6.lip6.fr 	 132.227.62.120 	 1307
+ple2.tu.koszalin.pl 	 62.108.171.76 	 28678
+ple3.ipv6.lip6.fr 	 132.227.62.121 	 1307
+ple4.ipv6.lip6.fr 	 132.227.62.122 	 1307
+ple5.ipv6.lip6.fr 	 132.227.62.123 	 1307
+ple6.ipv6.lip6.fr 	 132.227.62.124 	 1307
+plewifi.ipv6.lip6.fr 	 132.227.62.118 	 1307
+plgmu1.ite.gmu.edu 	 plgmu1.vse.gmu.edu.
+199.26.254.69 	 AS
+plgmu2.ite.gmu.edu 	 plgmu2.vse.gmu.edu.
+199.26.254.66 	 AS
+plgmu3.ite.gmu.edu 	 plgmu3.vse.gmu.edu.
+199.26.254.67 	 AS
+plgmu4.ite.gmu.edu 	 plgmu4.vse.gmu.edu.
+199.26.254.68 	 AS
+plgmu5.ite.gmu.edu 	  	 
+pli1-br-1.hpl.hp.com 	  	 
+pli1-br-2.hpl.hp.com 	  	 
+pli1-br-3.hpl.hp.com 	  	 
+pli1-pa-1.hpl.hp.com 	 204.123.28.51 	 33
+pli1-pa-2.hpl.hp.com 	 204.123.28.52 	 33
+pli1-pa-3.hpl.hp.com 	 204.123.28.53 	 33
+pli1-pa-4.hpl.hp.com 	 204.123.28.55 	 33
+pli1-pa-5.hpl.hp.com 	 204.123.28.56 	 33
+pli1-pa-6.hpl.hp.com 	 204.123.28.57 	 33
+pli1-tlnx.hpl.hp.com 	  	 
+pli2-br-1.hpl.hp.com 	  	 
+pli2-br-2.hpl.hp.com 	  	 
+plink.cs.uwaterloo.ca 	 129.97.74.12 	 12093
+pllab1.kamgu.ru 	  	 
+pllab2.kamgu.ru 	  	 
+pln.zju.edu.cn 	 210.32.133.7 	 4538
+plnode-03.gpolab.bbn.com 	 endor.gpolab.bbn.com.
+192.1.249.137 	 11488
+plnode-04.gpolab.bbn.com 	 hoth.gpolab.bbn.com.
+192.1.249.138 	 AS
+plnode01.cs.mu.oz.au 	 220.245.140.196 	 7545
+plnode02.cs.mu.oz.au 	 220.245.140.197 	 7545
+plnodea.plaust.edu.cn 	  	 
+plnodeb.plaust.edu.cn 	  	 
+plonk.cs.uwaterloo.ca 	 129.97.74.14 	 12093
+pluto.cs.binghamton.edu 	 128.226.103.66 	 4190
+pluto.cs.brown.edu 	 192.91.235.230 	 11078
+pn1-planetlab.huawei.com 	 58.60.106.66 	 4134
+pn2-planetlab.huawei.com 	 58.60.106.70 	 4134
+pnode1.pdcc-ntu.singaren.net.sg 	 203.30.39.238 	 23855
+pnode2.pdcc-ntu.singaren.net.sg 	 203.30.39.239 	 23855
+prata.mimuw.edu.pl 	 193.0.109.25 	 8890
+prometeusz.we.po.opole.pl 	 217.173.198.154 	 21182
+pub1-s.ane.cmc.osaka-u.ac.jp 	 133.1.74.162 	 4730
+pub2-s.ane.cmc.osaka-u.ac.jp 	 133.1.74.163 	 4730
+recall.snu.ac.kr 	 147.46.240.165 	 9488
+ricepl-1.cs.rice.edu 	 128.42.142.41 	 8
+ricepl-2.cs.rice.edu 	 128.42.142.42 	 8
+ricepl-4.cs.rice.edu 	 128.42.142.44 	 8
+ricepl-5.cs.rice.edu 	 128.42.142.45 	 8
+righthand.eecs.harvard.edu 	 140.247.60.126 	 1742
+roam1.cs.ou.edu 	 129.15.78.30 	 25776
+roam2.cs.ou.edu 	 129.15.78.31 	 25776
+rochefort.infonet.fundp.ac.be 	 138.48.3.203 	 2611
+roti.mimuw.edu.pl 	 193.0.109.23 	 8890
+salt.planetlab.cs.umd.edu 	 128.8.126.111 	 27
+saturn.cs.brown.edu 	  	 
+saturn.planetlab.carleton.ca 	 134.117.226.180 	 29773
+scratchy.comlab.bth.se 	 194.47.148.172 	 1653
+scratchy.cs.uga.edu 	 128.192.101.218 	 36441
+server1.planetlab.iit-tech.net 	  	 
+server2.planetlab.iit-tech.net 	  	 
+server3.planetlab.iit-tech.net 	  	 
+server4.planetlab.iit-tech.net 	  	 
+stella.planetlab.ntua.gr 	 147.102.224.228 	 3323
+sybaris.ipv6.lip6.fr 	 132.227.62.99 	 1307
+thalescom-48-41.cnt.nerim.net 	  	 
+ttu1-1.nodes.planet-lab.org 	 66.140.111.5 	 10421
+ttu2-1.nodes.planet-lab.org 	 66.140.111.7 	 10421
+uoepl1.essex.ac.uk 	  	 
+uoepl2.essex.ac.uk 	  	 
+utet.ii.uam.es 	 150.244.58.161 	 766
+uw1.accretive-dsl.nodes.planet-lab.org 	 207.178.4.6 	 NA
+vayu.iitd.ernet.in 	 103.27.9.4 	 132780
+venus.silicon-valley.ru 	 82.179.176.44 	 31575
+vicky.planetlab.ntua.gr 	 147.102.224.227 	 3323
+vn4.cse.wustl.edu 	 128.252.19.19 	 2552
+vn5.cse.wustl.edu 	 128.252.19.18 	 2552
+whitefall.planetlab.cs.umd.edu 	 128.8.126.79 	 27
+wlab02.pl.sophia.inria.fr 	 138.96.116.2 	 776
+zoi.di.uoa.gr 	  	 
