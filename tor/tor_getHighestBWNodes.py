@@ -17,8 +17,6 @@ import sys
 LENGTH = int(sys.argv[1])
 RELAY_TYPE = sys.argv[2]
 
-numNodes = 0
-
 # Stores (ip, bandwidth) pairs with highest bandwidths
 l = [] 
 for i in range(0, LENGTH):
@@ -54,17 +52,22 @@ with Controller.from_port(port = 9051) as controller:
 			bandwidth = re.search(r'\d+', line)
 			ip = re.search('\d+\.\d+\.\d+\.\d+', prevPrevLine)
 			insert((ip.group(), int(bandwidth.group())))
-			numNodes+= 1
+			# test.append((ip.group(), int(bandwidth.group())))
+			# numNodes+= 1
 
 		prevPrevLine = prevLine 
 		prevLine = line
 
 # For debug
-# print l
 cumBW = 0 
 for i in range(LENGTH):
 	cumBW+= l[i][1]
 	if (l[i][1] != 0):
-		print l[i][0] + ": " + str(l[i][1])
+		print l[i][0] + " " + str(l[i][1])
 
 print "Cumulative BW: " + str(cumBW)
+# print "Number of Nodes: " + str(numNodes)
+# print "Number of Nodes: " + str(len(test))
+
+
+
