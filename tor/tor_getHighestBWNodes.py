@@ -52,8 +52,6 @@ with Controller.from_port(port = 9051) as controller:
 			bandwidth = re.search(r'\d+', line)
 			ip = re.search('\d+\.\d+\.\d+\.\d+', prevPrevLine)
 			insert((ip.group(), int(bandwidth.group())))
-			# test.append((ip.group(), int(bandwidth.group())))
-			# numNodes+= 1
 
 		prevPrevLine = prevLine 
 		prevLine = line
@@ -66,8 +64,6 @@ for i in range(LENGTH):
 		print l[i][0] + " " + str(l[i][1])
 
 print "Cumulative BW: " + str(cumBW)
-# print "Number of Nodes: " + str(numNodes)
-# print "Number of Nodes: " + str(len(test))
 
 
 

@@ -28,7 +28,7 @@ with Controller.from_port(port = 9051) as controller:
 			bandwidth = re.search(r'\d+', line)
 			exitBW+= int(bandwidth.group()) 
 			numExitNodes+= 1
-		elif "Bandwidth" in line and "Guard" in prevLine: 
+		if "Bandwidth" in line and "Guard" in prevLine: 
 			bandwidth = re.search(r'\d+', line)
 			entryBW+= int(bandwidth.group())
 			numEntryNodes+= 1
@@ -36,5 +36,5 @@ with Controller.from_port(port = 9051) as controller:
 		prevPrevLine = prevLine 
 		prevLine = line
 
-	print str(numExitNodes) + " exit nodes with " + str(exitBW) 
-	print str(numEntryNodes) + " entry nodes with " + str(entryBW)
+	print str(numExitNodes) + " Exit nodes with " + str(exitBW) 
+	print str(numEntryNodes) + " Guard nodes with " + str(entryBW)
