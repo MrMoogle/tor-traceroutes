@@ -62,6 +62,6 @@ do
 done < nodes.txt
 
 # Inserts into database
-# cd /mnt/external-drive/
-# nohup bash ~/scripts/insertIntoDB2.sh "$ENTRY_DIRNAME" &
-# nohup bash ~/scripts/insertIntoDB2.sh "$EXIT_DIRNAME" &
+cd /mnt/external-drive/
+nohup bash ~/scripts/insertIntoDB2.sh "$ENTRY_DIRNAME" &
+nohup bash ~/scripts/insertIntoDB2.sh "$EXIT_DIRNAME" &
