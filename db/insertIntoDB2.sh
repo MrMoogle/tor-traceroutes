@@ -18,8 +18,7 @@ function insert
 		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | sed -n 2p | cut -f1 -d" "`
 	fi
 
-	destIP=`echo $1 | cut -f7 -d "/" | cut -f1 -d "("`
-		#destAS="AS"`whois -h whois.cymru.com " -v $destIP" | sed -n 4p | cut -f1 -d" "`
+	destIP=`echo $1 | awk -F"/" '{print $NF}' | cut -f1 -d "("`
 	destAS="AS"`whois -h whois.cymru.com " -v $destIP" | sed -n 2p | cut -f1 -d" "`
 	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1`
 	path=`cat "$1"`
@@ -31,17 +30,6 @@ function insert
 		valid="false"
 	fi 
 
-	# If traceroute is completed, retrieves destAS from traceroute. Otherwise,
-	# retrieves destAS by querying whois.cymru.com. 
-	lastLine=`tail -1 "$1" | grep "*"`
-	if [[ "$lastLine" ]];
-	then
-		valid="false" 
-		destAS="AS"`whois -h whois.cymru.com " -v $destIP" | sed -n 4p | cut -f1 -d" "`
-	else
-		destAS=`tail -1 "$1" | cut -d "[" -f2 | cut -d "]" -f1`
-	fi
-
 	# Inserts into database
 	query="INSERT INTO paths (tstamp, srcip, srcas, destip, destas, path, type, valid) \
 		   VALUES (to_timestamp('$tstamp', 'MM-DD-YY-HH24:MI'), \
@@ -49,6 +37,7 @@ function insert
 	# psql -U oli -d postgres -w -c "$query"
 
 	# #For debug
+	echo "$1"
 	echo "HOST: $host"
 	echo "srcIP: $srcIP"
 	echo "srcAS: $srcAS"
@@ -59,8 +48,7 @@ function insert
 	echo	
 }
 
-# e.g. entryResults/entryResults
-# cd /mnt/external-drive/$1
+cd $1
 
 type="Entry"
 if [[ $1 == *exit* ]];
@@ -68,12 +56,15 @@ then
 	type="Exit"
 fi
 
+echo $type 
+
 for host in *
 do
+	echo $host 
 	cd $host 
 	for traceroute in * 
 	do 
-		insert "$CURR_DIR/$1/$host/$traceroute" &
+		insert "$CURR_DIR/$1/$host/$traceroute"
 	done
 
 	cd ..
