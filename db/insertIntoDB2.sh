@@ -22,7 +22,7 @@ function insert
 	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1`
 	path=`cat "$1"`
 	
-	# A traceroute seis invalid if it has more than 2 routers that timed out
+	# A traceroute is invalid if it has more than 2 routers that timed out
 	valid="true"
 	if [ `grep -o "\* \* \*" "$1" | wc -l` -ge 2 ]; 
 	then 
@@ -57,9 +57,9 @@ function insert
 	echo	
 }
 
-#cd $1
-# e.g. entryResults/entryResults...
-cd /mnt/external-drive/$1
+# e.g. entryResults/entryResults
+# cd /mnt/external-drive/$1
+cd 
 
 type="Entry"
 if [[ $1 == *exit* ]];
@@ -67,15 +67,12 @@ then
 	type="Exit"
 fi
 
-#touch /home/oli/logs/insertIntoDB2
-
 for host in *
 do
 	cd $host 
 	for traceroute in * 
 	do 
 		insert "/mnt/external-drive/$1/$host/$traceroute" &
-		#echo "$host:$traceroute" >> /home/oli/logs/insertIntoDB2 &  
 	done
 
 	cd ..
@@ -84,4 +81,4 @@ do
 done
 
 cd ..
-rmdir "$1"
+# rmdir "$1"
