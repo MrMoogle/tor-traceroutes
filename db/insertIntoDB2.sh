@@ -5,6 +5,8 @@
 # Author: Oscar Li
 #--------------------------------------------------------------
 
+CURR_DIR=`pwd`
+
 # Takes traceroute file and inserts it into DB 
 function insert
 {
@@ -59,7 +61,6 @@ function insert
 
 # e.g. entryResults/entryResults
 # cd /mnt/external-drive/$1
-cd 
 
 type="Entry"
 if [[ $1 == *exit* ]];
@@ -72,7 +73,7 @@ do
 	cd $host 
 	for traceroute in * 
 	do 
-		insert "/mnt/external-drive/$1/$host/$traceroute" &
+		insert "$CURR_DIR/$1/$host/$traceroute" &
 	done
 
 	cd ..
