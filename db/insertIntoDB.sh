@@ -11,14 +11,15 @@ CURR_DIR=`pwd`
 function insert
 {
 	srcIP=`sed -n 2p < "$1" | cut -d "(" -f2 | cut -d ")" -f1` 
-	srcAS=`sed -n 2p < "$1" | cut -d "[" -f2 | cut -d "]" -f1`
 	if [ "$srcAS" = "*" ];
 	then
 		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
+	else 
+		srcAS=`sed -n 2p < "$1" | cut -d "[" -f2 | cut -d "]" -f1`
 	fi
 
 	destIP=`echo $1 | awk -F"/" '{print $NF}' | cut -f1 -d "("`
-	destAS="AS"`whois -h whois.cymru.com " -v $destIP" | sed -n 2p | cut -f1 -d" "`
+	destAS="AS"`whois -h whois.cymru.com " -v $destIP" | tail -1 | cut -f1 -d" "`
 	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1`
 	path=`cat "$1"`
 	
