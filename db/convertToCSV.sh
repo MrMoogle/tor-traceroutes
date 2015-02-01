@@ -65,7 +65,8 @@ do
 	cd $host 
 	for traceroute in * 
 	do 
-		convert "$CURR_DIR/$1/$host/$traceroute" 
+		# convert "$CURR_DIR/$1/$host/$traceroute" 
+		convert "$1/$host/$traceroute" 
 		echo "$entry"
 	done
 
