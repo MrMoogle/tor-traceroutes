@@ -19,7 +19,7 @@ function insert
 	fi
 
 	destIP=`echo $1 | awk -F"/" '{print $NF}' | cut -f1 -d "("`
-	destAS="AS"`whois -h whois.cymru.com " -v $destIP" | sed -n 2p | cut -f1 -d" "`
+	destAS="AS"`whois -h whois.cymru.com " -v $destIP" | tail -1 | cut -f1 -d" "`
 	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1`
 	path=`cat "$1"`
 	
