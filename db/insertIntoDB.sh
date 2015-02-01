@@ -22,7 +22,11 @@ function insert
 	destAS="AS"`whois -h whois.cymru.com " -v $destIP" | tail -1 | cut -f1 -d" "`
 	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1`
 	path=`cat "$1"`
-	
+
+	echo $path | grep -o '\[AS[0-9]*\]' | awk '!x[$0]++' > temp.txt
+	aspath=`cat temp.txt` 
+	numases=`wc -l < temp.txt | tr -d " \t\n\r"` 
+
 	# A traceroute is invalid if it has more than 2 routers that timed out
 	valid="true"
 	if [ `grep -o "\* \* \*" "$1" | wc -l` -ge 2 ]; 
@@ -31,10 +35,10 @@ function insert
 	fi 
 
 	# Inserts into database
-	query="INSERT INTO paths (tstamp, srcip, srcas, destip, destas, path, type, valid) \
+	query="INSERT INTO paths (tstamp, srcip, srcas, destip, destas, path, aspath, numases, type, valid) \
 		   VALUES (to_timestamp('$tstamp', 'MM-DD-YY-HH24:MI'), \
-		   		   '$srcIP', '$srcAS', '$destIP', '$destAS', '$path', '$type', $valid);"
-	# psql -U oli -d postgres -w -c "$query"
+		   		   '$srcIP', '$srcAS', '$destIP', '$destAS', '$path', '$aspath', $numases, '$type', $valid);"
+	# psql -U oli -d raptor -w -c "$query"
 
 	# For debug
 	echo "$1"
@@ -43,6 +47,8 @@ function insert
 	echo "srcAS: $srcAS"
 	echo "destIP: $destIP"
 	echo "destAS: $destAS"
+	echo "aspath: $aspath"
+	echo "numases: $numases"
 	echo "tstamp: $tstamp"
 	echo "valid: $valid"
 	echo	
