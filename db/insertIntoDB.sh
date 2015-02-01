@@ -23,7 +23,7 @@ function insert
 	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1`
 	path=`cat "$1"`
 
-	echo $path | grep -o '\[AS[0-9]*\]' | awk '!x[$0]++' > temp.txt
+	echo $path | grep -o '\[[AS[0-9\/]*]*\]' | awk '!x[$0]++' > temp.txt
 	aspath=`cat temp.txt` 
 	numases=`wc -l < temp.txt | tr -d " \t\n\r"` 
 
@@ -62,11 +62,8 @@ then
 	type="Exit"
 fi
 
-echo $type 
-
 for host in *
 do
-	echo $host 
 	cd $host 
 	for traceroute in * 
 	do 
