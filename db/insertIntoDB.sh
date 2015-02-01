@@ -68,6 +68,7 @@ do
 	for traceroute in * 
 	do 
 		insert "$CURR_DIR/$1/$host/$traceroute" &
+		sleep 1
 	done
 
 	cd ..
