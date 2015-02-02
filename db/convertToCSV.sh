@@ -36,7 +36,6 @@ function convert
 
 	# Inserts into database
 	entry="$timestamp, $srcIP, $srcAS, $destIP, $destAS, $path, $aspath, $numases, $type, $valid"
-	echo $entry
 
 	# For debug
 	# echo "$1"
@@ -67,6 +66,7 @@ do
 	do 
 		# convert "$CURR_DIR/$1/$host/$traceroute" 
 		convert "$1/$host/$traceroute" &
+		echo "$entry"
 	done
 
 	cd ..
