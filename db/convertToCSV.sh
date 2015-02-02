@@ -35,7 +35,7 @@ function convert
 	fi 
 
 	# Inserts into database
-	entry="$timestamp, $srcIP, $srcAS, $destIP, $destAS, $path, $aspath, $numases, $type, $valid"
+	entry="$tstamp:$srcIP:$srcAS:$destIP:$destAS:$path:$aspath:$numases:$type:$valid"
 
 	# For debug
 	# echo "$1"
