@@ -23,9 +23,9 @@ function convert
 	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1`
 	path=`cat "$1"`
 
-	echo $path | grep -o '\[[AS[0-9\/]*]*\]' | awk '!x[$0]++' > temp.txt
-	aspath=`cat temp.txt` 
-	numases=`wc -l < temp.txt | tr -d " \t\n\r"` 
+	echo $path | grep -o '\[[AS[0-9\/]*]*\]' | awk '!x[$0]++' > ~/tempCSV.txt
+	aspath=`cat ~/tempCSV.txt` 
+	numases=`wc -l < ~/tempCSV.txt | tr -d " \t\n\r"` 
 
 	# A traceroute is invalid if it has more than 2 routers that timed out
 	valid="true"
