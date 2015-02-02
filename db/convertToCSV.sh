@@ -34,7 +34,7 @@ function convert
 		valid="false"
 	fi 
 
-	# Inserts into database
+	# Creates CSV entry
 	entry="$tstamp:$srcIP:$srcAS:$destIP:$destAS:$path:$aspath:$numases:$type:$valid"
 
 	# For debug
@@ -66,7 +66,7 @@ do
 	do 
 		# convert "$CURR_DIR/$1/$host/$traceroute" 
 		convert "$1/$host/$traceroute"
-		echo "$entry"
+		echo "$entry" | sed ':a;N;$!ba;s/\n/\\n/g'
 	done
 
 	cd ..
