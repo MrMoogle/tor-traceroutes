@@ -35,7 +35,7 @@ function convert
 	fi 
 
 	# Creates CSV entry
-	entry="$tstamp:$srcIP:$srcAS:$destIP:$destAS:$path:$aspath:$numases:$type:$valid"
+	entry="$tstamp~$srcIP~$srcAS~$destIP~$destAS~$path~$aspath~$numases~$type~$valid"
 
 	# For debug
 	# echo "$1"
