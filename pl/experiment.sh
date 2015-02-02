@@ -17,14 +17,14 @@ mkdir $EXIT_DIRNAME
 # Copies back the traceroute data, deletes it, and runs a new traceroute job
 function nodeOp 
 {
-	scp -o ConnectTimeout=5 -r princeton_oli@$1:entryResults $ENTRY_DIRNAME/$1 2> /dev/null 
-  	scp -o ConnectTimeout=5 -r princeton_oli@$1:exitResults $EXIT_DIRNAME/$1 2> /dev/null 
+	scp -o ConnectTimeout=5 -r princeton_oscar@$1:entryResults $ENTRY_DIRNAME/$1 2> /dev/null 
+  	scp -o ConnectTimeout=5 -r princeton_oscar@$1:exitResults $EXIT_DIRNAME/$1 2> /dev/null 
 	
 	if [ -e "$DIRNAME"/$1 ];
 	then
-	    scp exitNodes.txt princeton_oli@$1:.
-	    scp entryNodes.txt princeton_oli@$1:. 
-	    ssh -n princeton_oli@$1 "rm -rf entryResults && rm -rf exitResults && nohup bash trace.sh > /dev/null 2>&1"
+	    scp exitNodes.txt princeton_oscar@$1:.
+	    scp entryNodes.txt princeton_oscar@$1:. 
+	    ssh -n princeton_oscar@$1 "rm -rf entryResults && rm -rf exitResults && nohup bash trace.sh > /dev/null 2>&1"
 	fi 
 }
 

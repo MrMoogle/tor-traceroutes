@@ -1,7 +1,7 @@
 #!/bin/bash
 #--------------------------------------------------------------
 # Purpose: Converts traceroute data to CSV format 
-# Execution: bash convert.sh <traceroutes folder name> <csv file name>
+# Execution: bash convertToCSV.sh <traceroutes folder name> > output
 # Author: Oscar Li
 #--------------------------------------------------------------
 
@@ -35,9 +35,9 @@ function convert
 	fi 
 
 	# Inserts into database
-	entry="$srcIP, $srcAS, $destIP, $destAS, $path, $aspath, $numases, $type, $valid"
+	entry="$timestamp, $srcIP, $srcAS, $destIP, $destAS, $path, $aspath, $numases, $type, $valid"
+	echo $entry
 
-	# echo $entry
 	# For debug
 	# echo "$1"
 	# echo "HOST: $host"
@@ -66,8 +66,7 @@ do
 	for traceroute in * 
 	do 
 		# convert "$CURR_DIR/$1/$host/$traceroute" 
-		convert "$1/$host/$traceroute" 
-		echo "$entry"
+		convert "$1/$host/$traceroute" &
 	done
 
 	cd ..

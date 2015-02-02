@@ -2,6 +2,8 @@
 
 mkdir entryResults
 mkdir exitResults
+
+# Prevent accidental DDOS
 shuf entryNodes.txt > rand_entry.txt
 shuf exitNodes.txt > rand_exit.txt  
 
