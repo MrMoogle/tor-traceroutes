@@ -37,16 +37,16 @@ function convert
 	# Creates CSV entry
 	#entry="$tstamp~$srcIP~$srcAS~$destIP~$destAS~$path~$aspath~$numases~$type~$valid"
 
-	if [ `${#destip}` -ge 16 ];
+	if [ `echo ${#destip}` -ge 16 ];
 	then
 		echo "$destip"
 	fi
 
-	if [ `${#srcip}` -ge 16 ];
+	if [ `echo ${#srcip}` -ge 16 ];
 	then
 		echo "$srcip"
 	fi
-	
+
 	# For debug
 	# echo "$1"
 	# echo "HOST: $host"
