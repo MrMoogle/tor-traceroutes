@@ -59,9 +59,9 @@ then
 	type="Exit"
 fi
 
-tstamp=`date +%m-%d-%y\ %k:%M`
+tstamp=`date +%m-%d-%y_%k:%M`
 
-touch "~/logs/$type$tstamp"
+touch ~/logs/"$type$tstamp"
 
 for host in *
 do
