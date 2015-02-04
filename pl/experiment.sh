@@ -33,12 +33,12 @@ cd /home/oli
 
 # Gets most updated list of Tor entry guards
 mv entryNodes.txt foo.txt
-python scripts/tor_getEntryNodes.py foo.txt > entryNodes.txt
+python tor-traceroutes/tor/tor_getEntryNodes.py foo.txt > entryNodes.txt
 rm foo.txt
 
 # Gets most updated list of Tor exit guards
 mv exitNodes.txt foo.txt
-python scripts/tor_getExitNodes.py foo.txt > exitNodes.txt
+python tor-traceroutes/tor/tor_getExitNodes.py foo.txt > exitNodes.txt
 rm foo.txt
 
 # Backup
@@ -46,7 +46,7 @@ cp entryNodes.txt backup/.
 cp exitNodes.txt backup/.
 
 # Gets list of active PL nodes
-python scripts/retrieveActiveNodes.py > temp.txt
+python tor-traceroutes/pl/retrieveActiveNodes.py > temp.txt
 if ((`wc -l < temp.txt` > 0));
 then
   sort temp.txt > nodes.txt
@@ -60,8 +60,3 @@ do
  	sleep 15
  	echo $line >> output/output"($DATE)"
 done < nodes.txt
-
-# Inserts into database
-cd /mnt/external-drive/
-nohup bash ~/scripts/insertIntoDB2.sh "$ENTRY_DIRNAME" &
-nohup bash ~/scripts/insertIntoDB2.sh "$EXIT_DIRNAME" &
