@@ -61,11 +61,11 @@ fi
 
 tstamp=`date +%m-%d-%y\ %k:%M`
 
-touch "logs/$type$tstamp"
+touch "~/logs/$type$tstamp"
 
 for host in *
 do
-	echo $host >> "logs/$type$tstamp"
+	echo $host >> "~/logs/$type$tstamp"
 	cd $host 
 	for traceroute in * 
 	do 
