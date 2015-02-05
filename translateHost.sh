@@ -5,10 +5,10 @@
 # Author: Oscar Li
 #--------------------------------------------------------------
 
-while read IP
+while read line
 do
-	#IP="`dig +short $line`" 
+	IP="`dig +short $line`" 
 	AS="`whois -h whois.cymru.com " -v $IP" | tail -1 | cut -f1 -d" "`"
 
-	echo -e "$AS"
+	echo -e "$line \t $IP \t $AS"
 done < $1

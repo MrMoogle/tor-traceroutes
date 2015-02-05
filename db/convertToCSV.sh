@@ -7,15 +7,13 @@
 
 CURR_DIR=`pwd`
 
-# Takes traceroute file and inserts it into DB 
+# Takes traceroute file and converts it to CSV format
 function convert
 {
-	srcIP=`sed -n 2p < "$1" | cut -d "(" -f2 | cut -d ")" -f1` 
+	srcAS=`sed -n 2p < "$1" | cut -d "[" -f2 | cut -d "]" -f1`
 	if [ "$srcAS" = "*" ];
 	then
 		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
-	else 
-		srcAS=`sed -n 2p < "$1" | cut -d "[" -f2 | cut -d "]" -f1`
 	fi
 
 	destIP=`echo $1 | awk -F"/" '{print $NF}' | cut -f1 -d "("`
@@ -61,16 +59,20 @@ fi
 
 tstamp=`date +%m-%d-%y_%k:%M`
 
-touch ~/logs/"$type$tstamp"
+touch "$CURR_DIR"/logs/"$type$tstamp"
 
 for host in *
 do
-	echo $host >> ~/logs/"$type$tstamp"
+	echo $host >> "$CURR_DIR"/logs/"$type$tstamp"
+	srcIP="`dig +short $host`" 
+
 	cd $host 
+	
 	for traceroute in * 
 	do 
-		# convert "$CURR_DIR/$1/$host/$traceroute" 
-		convert "$1/$host/$traceroute"
+		# convert "$1/$host/$traceroute"
+		convert "$CURR_DIR/$1/$host/$traceroute" 
+		
 		echo "$entry" | sed ':a;N;$!ba;s/\n/\\n/g'
 	done
 
