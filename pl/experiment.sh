@@ -20,7 +20,7 @@ function nodeOp
 	scp -o ConnectTimeout=5 -r princeton_oscar@$1:entryResults $ENTRY_DIRNAME/$1 2> /dev/null 
   	scp -o ConnectTimeout=5 -r princeton_oscar@$1:exitResults $EXIT_DIRNAME/$1 2> /dev/null 
 	
-	if [ -e "$DIRNAME"/$1 ];
+	if [ -e "$ENTRY_DIRNAME"/$1 ];
 	then
 	    scp exitNodes.txt princeton_oscar@$1:.
 	    scp entryNodes.txt princeton_oscar@$1:. 
