@@ -28,13 +28,12 @@ function convert
 		echo $destAS
 	fi 
 	
-
 	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1 | sed 's/-/ /3'`
 	path=`cat "$1"`
 
 	echo "here!"
 
-	echo $path | grep -o '\[[AS[0-9\/]*]*\]' | awk '!x[$0]++' > ~/tempCSV.txt
+	grep -o '\[[AS[0-9\/]*]*\]' "$1" | awk '!x[$0]++' > ~/tempCSV.txt
 	aspath=`cat ~/tempCSV.txt` 
 	numases=`wc -l < ~/tempCSV.txt | tr -d " \t\n\r"` 
 
