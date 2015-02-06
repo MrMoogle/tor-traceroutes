@@ -6,11 +6,10 @@
 # Author: Oscar Li
 #--------------------------------------------------------------
 
-
 # Creates the name of the directory that we copy to
 DATE=`date +%m-%d-%y`
-ENTRY_DIRNAME=/mnt/external-drive/entryResults"($DATE)"
-EXIT_DIRNAME=/mnt/external-drive/exitResults"($DATE)"
+ENTRY_DIRNAME=~/entryResults"($DATE)"
+EXIT_DIRNAME=~/exitResults"($DATE)"
 mkdir $ENTRY_DIRNAME
 mkdir $EXIT_DIRNAME
 
@@ -22,28 +21,11 @@ function nodeOp
 	
 	if [ -e "$ENTRY_DIRNAME"/$1 ];
 	then
-	    scp exitNodes.txt princeton_oscar@$1:.
-	    scp entryNodes.txt princeton_oscar@$1:. 
 	    ssh -n princeton_oscar@$1 "nohup bash trace.sh > /dev/null 2>&1"
 	fi 
 }
 
-# Navigates to correct directory 
-cd /home/oli
-
-# Gets most updated list of Tor entry guards
-mv entryNodes.txt foo.txt
-python tor-traceroutes/tor/tor_getEntryNodes.py foo.txt > entryNodes.txt
-rm foo.txt
-
-# Gets most updated list of Tor exit guards
-mv exitNodes.txt foo.txt
-python tor-traceroutes/tor/tor_getExitNodes.py foo.txt > exitNodes.txt
-rm foo.txt
-
-# Backup
-cp entryNodes.txt backup/.
-cp exitNodes.txt backup/.
+cd
 
 # Gets list of active PL nodes
 python tor-traceroutes/pl/retrieveActiveNodes.py > temp.txt
@@ -58,5 +40,5 @@ while read line
 do
  	nodeOp $line &
  	sleep 15
- 	echo $line >> output/output"($DATE)"
+ 	echo $line >> logs/experiment"($DATE)"
 done < nodes.txt
