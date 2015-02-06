@@ -3,6 +3,7 @@
 # Purpose: Converts traceroute data to CSV format 
 # Execution: bash convertToCSV.sh <traceroutes folder name> > output
 # Author: Oscar Li
+# Notes: Bash must be version 4 or above
 #--------------------------------------------------------------
 
 CURR_DIR=`pwd`
@@ -16,12 +17,13 @@ cd $1
 function convert
 {
 	destIP=`echo $1 | awk -F"/" '{print $NF}' | cut -f1 -d "("`
-	
-	destAS="${ip_as["$destIP"]}"
+	echo $destIP
+
+	destAS="${ip_AS["$destIP"]}"
 	if [ "$destAS" = "" ];
 	then 
 		destAS="AS"`whois -h whois.cymru.com " -v $destIP" | tail -1 | cut -f1 -d" "`
-		ip_as["$destIP"]="$destAS"
+		ip_AS["$destIP"]="$destAS"
 	fi 
 	
 	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1 | sed 's/-/ /3'`
