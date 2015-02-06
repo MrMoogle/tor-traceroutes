@@ -38,6 +38,7 @@ function convert
 	aspath=`cat ~/tempCSV.txt` 
 	numases=`wc -l < ~/tempCSV.txt | tr -d " \t\n\r"` 
 
+	echo "here1!"
 	# A traceroute is invalid if it has more than 2 routers that timed out
 	valid="true"
 	if [ `grep -o "\* \* \*" "$1" | wc -l` -ge 2 ]; 
@@ -45,8 +46,7 @@ function convert
 		valid="false"
 	fi 
 
-	echo "here1!"
-	
+	echo "here2!"
 	# Creates CSV entry
 	entry="$tstamp~$srcIP~$srcAS~$destIP~$destAS~$path~$aspath~$numases~$type~$valid"
 
