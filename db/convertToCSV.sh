@@ -20,7 +20,7 @@ function convert
 	echo $destIP
 	destAS="${ip_AS["$destIP"]}"
 	echo $destAS
-	
+
 	if [ "$destAS" = "" ];
 	then 
 		destAS="AS"`whois -h whois.cymru.com " -v $destIP" | tail -1 | cut -f1 -d" "`
@@ -86,8 +86,7 @@ do
 
 	for traceroute in * 
 	do 
-		convert "$1/$host/$traceroute"
-		# convert "$CURR_DIR/$1/$host/$traceroute" 
+		convert "$CURR_DIR/$1/$host/$traceroute" 
 		
 		echo "$entry" | sed ':a;N;$!ba;s/\n/\\n/g'
 	done
