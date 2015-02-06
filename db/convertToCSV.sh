@@ -17,27 +17,21 @@ cd $1
 function convert
 {
 	destIP=`echo $1 | awk -F"/" '{print $NF}' | cut -f1 -d "("`
-	echo $destIP
 	destAS="${ip_AS["$destIP"]}"
-	echo $destAS
 
 	if [ "$destAS" = "" ];
 	then 
 		destAS="AS"`whois -h whois.cymru.com " -v $destIP" | tail -1 | cut -f1 -d" "`
 		ip_AS["$destIP"]="$destAS"
-		echo $destAS
 	fi 
 	
 	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1 | sed 's/-/ /3'`
 	path=`cat "$1"`
 
-	echo "here!"
-
 	grep -o '\[[AS[0-9\/]*]*\]' "$1" | awk '!x[$0]++' > ~/tempCSV.txt
 	aspath=`cat ~/tempCSV.txt` 
 	numases=`wc -l < ~/tempCSV.txt | tr -d " \t\n\r"` 
 
-	echo "here1!"
 	# A traceroute is invalid if it has more than 2 routers that timed out
 	valid="true"
 	if [ `grep -o "\* \* \*" "$1" | wc -l` -ge 2 ]; 
@@ -45,7 +39,6 @@ function convert
 		valid="false"
 	fi 
 
-	echo "here2cd!"
 	# Creates CSV entry
 	entry="$tstamp~$srcIP~$srcAS~$destIP~$destAS~$path~$aspath~$numases~$type~$valid"
 
