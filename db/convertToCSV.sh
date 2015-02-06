@@ -7,18 +7,24 @@
 
 CURR_DIR=`pwd`
 
+# Maps IP addreses to ASes
+declare -A ip_AS
+
+cd $1
+
 # Takes traceroute file and converts it to CSV format
 function convert
 {
-	srcAS=`sed -n 2p < "$1" | cut -d "[" -f2 | cut -d "]" -f1`
-	if [ "$srcAS" = "*" ];
-	then
-		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
-	fi
-
 	destIP=`echo $1 | awk -F"/" '{print $NF}' | cut -f1 -d "("`
-	destAS="AS"`whois -h whois.cymru.com " -v $destIP" | tail -1 | cut -f1 -d" "`
-	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1`
+	
+	destAS="${ip_as["$destIP"]}"
+	if [ "$destAS" = "" ];
+	then 
+		destAS="AS"`whois -h whois.cymru.com " -v $destIP" | tail -1 | cut -f1 -d" "`
+		ip_as["$destIP"]="$destAS"
+	fi 
+	
+	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1 | sed 's/-/ /3'`
 	path=`cat "$1"`
 
 	echo $path | grep -o '\[[AS[0-9\/]*]*\]' | awk '!x[$0]++' > ~/tempCSV.txt
@@ -49,8 +55,6 @@ function convert
 	# echo "path: $path"
 }
 
-cd $1
-
 type="Entry"
 if [[ $1 == *exit* ]];
 then
@@ -59,26 +63,33 @@ fi
 
 tstamp=`date +%m-%d-%y_%k:%M`
 
+# For logging progress
 touch "$CURR_DIR"/logs/"$type$tstamp"
 
 for host in *
 do
 	echo $host >> "$CURR_DIR"/logs/"$type$tstamp"
-	srcIP="`dig +short $host`" 
 
 	cd $host 
-	
+
+	# Finds srcIP and srcAS for host
+	srcIP="`dig +short $host`" 
+	traceroute=`ls -1 | head -1`
+	srcAS=`sed -n 2p < "$traceroute" | cut -d "[" -f2 | cut -d "]" -f1`
+	if [ "$srcAS" = "*" ];
+	then
+		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
+	fi
+
 	for traceroute in * 
 	do 
-		# convert "$1/$host/$traceroute"
-		convert "$CURR_DIR/$1/$host/$traceroute" 
+		convert "$1/$host/$traceroute"
+		# convert "$CURR_DIR/$1/$host/$traceroute" 
 		
 		echo "$entry" | sed ':a;N;$!ba;s/\n/\\n/g'
 	done
 
 	cd ..
-	# rm -rf $host
 done
 
 cd ..
-# rmdir "$1"
