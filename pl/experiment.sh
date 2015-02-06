@@ -24,7 +24,7 @@ function nodeOp
 	then
 	    scp exitNodes.txt princeton_oscar@$1:.
 	    scp entryNodes.txt princeton_oscar@$1:. 
-	    ssh -n princeton_oscar@$1 "rm -rf entryResults && rm -rf exitResults && nohup bash trace.sh > /dev/null 2>&1"
+	    ssh -n princeton_oscar@$1 "nohup bash trace.sh > /dev/null 2>&1"
 	fi 
 }
 

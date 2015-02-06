@@ -1,7 +1,8 @@
 #!/bin/bash
 
-mkdir entryResults
-mkdir exitResults
+rm -rf entryResults exitResults
+
+mkdir entryResults exitResults
 
 # Prevent accidental DDOS
 shuf entryNodes.txt > rand_entry.txt
@@ -25,6 +26,3 @@ do
 done < rand_exit.txt &
 
 # Converts to CSV 
-
-
-#ifconfig | perl -nle 's/dr:(\S+)/print $1/e'
