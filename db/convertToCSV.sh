@@ -46,7 +46,7 @@ function convert
 		valid="false"
 	fi 
 
-	echo "here2!"
+	echo "here2cd!"
 	# Creates CSV entry
 	entry="$tstamp~$srcIP~$srcAS~$destIP~$destAS~$path~$aspath~$numases~$type~$valid"
 
@@ -92,7 +92,8 @@ do
 
 	for traceroute in * 
 	do 
-		convert "$CURR_DIR/$1/$host/$traceroute" 
+		# convert "$CURR_DIR/$1/$host/$traceroute" 
+		convert "$CURR_DIR/$1/$host/$traceroute"
 		
 		echo "$entry" | sed ':a;N;$!ba;s/\n/\\n/g'
 	done
