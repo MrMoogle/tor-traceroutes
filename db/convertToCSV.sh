@@ -18,8 +18,9 @@ function convert
 {
 	destIP=`echo $1 | awk -F"/" '{print $NF}' | cut -f1 -d "("`
 	echo $destIP
-
 	destAS="${ip_AS["$destIP"]}"
+	echo $destAS
+	
 	if [ "$destAS" = "" ];
 	then 
 		destAS="AS"`whois -h whois.cymru.com " -v $destIP" | tail -1 | cut -f1 -d" "`
