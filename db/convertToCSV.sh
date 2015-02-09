@@ -62,10 +62,8 @@ then
 	type="Exit"
 fi
 
-tstamp=`date +%m-%d-%y_%k:%M`
-
 # For logging progress
-touch "$CURR_DIR"/logs/"$type$tstamp"
+touch "$CURR_DIR"/logs/"$type`date +%m-%d-%y_%k:%M`"
 
 for host in *
 do
