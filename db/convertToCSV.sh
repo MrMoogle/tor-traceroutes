@@ -63,30 +63,38 @@ then
 fi
 
 # For logging progress
-touch "$CURR_DIR"/logs/"$type`date +%m-%d-%y_%k:%M`"
+today=`date +%m-%d-%y_%k:%M`
+touch "$CURR_DIR"/logs/"$type$today"
 
 for host in *
 do
-	echo $host >> "$CURR_DIR"/logs/"$type$tstamp"
+	echo $host >> "$CURR_DIR"/logs/"$type$today"
 
 	cd $host 
-
-	# Finds srcIP and srcAS for host
 	srcIP="`dig +short $host`" 
-	traceroute=`ls -1 | head -1`
-	srcAS=`sed -n 2p < "$traceroute" | cut -d "[" -f2 | cut -d "]" -f1`
-	if [ "$srcAS" = "*" ];
-	then
-		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
-	fi
 
-	for traceroute in * 
+	# temporary
+	for destIP in *
 	do 
-		convert "$traceroute" 
+		cd $destIP 
+		# Finds srcIP and srcAS for host
+		# srcIP="`dig +short $host`" 
+		traceroute=`ls -1 | head -1`
+		srcAS=`sed -n 2p < "$traceroute" | cut -d "[" -f2 | cut -d "]" -f1`
+		
+		if [ "$srcAS" = "*" ];
+		then
+			srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
+		fi
 
-		#convert "$1/$host/$traceroute"
+		for traceroute in * 
+		do 
+			convert "$traceroute" 
 
-		echo "$entry" | sed ':a;N;$!ba;s/\n/\\n/g'
+			echo "$entry" | sed ':a;N;$!ba;s/\n/\\n/g'
+		done
+
+		cd ..
 	done
 
 	cd ..
