@@ -71,30 +71,23 @@ do
 	echo $host >> "$CURR_DIR"/logs/"$type$today"
 
 	cd $host 
+
+	# Finds srcIP and srcAS for host
 	srcIP="`dig +short $host`" 
+	traceroute=`ls -1 | head -1`
+	srcAS=`sed -n 2p < "$traceroute" | cut -d "[" -f2 | cut -d "]" -f1`
+	if [ "$srcAS" = "*" ];
+	then
+		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
+	fi
 
-	# temporary
-	for destIP in *
+	for traceroute in * 
 	do 
-		cd $destIP 
-		# Finds srcIP and srcAS for host
-		# srcIP="`dig +short $host`" 
-		traceroute=`ls -1 | head -1`
-		srcAS=`sed -n 2p < "$traceroute" | cut -d "[" -f2 | cut -d "]" -f1`
-		
-		if [ "$srcAS" = "*" ];
-		then
-			srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
-		fi
+		convert "$traceroute" 
 
-		for traceroute in * 
-		do 
-			convert "$traceroute" 
+		#convert "$1/$host/$traceroute"
 
-			echo "$entry" | sed ':a;N;$!ba;s/\n/\\n/g'
-		done
-
-		cd ..
+		echo "$entry" | sed ':a;N;$!ba;s/\n/\\n/g'
 	done
 
 	cd ..
