@@ -13,8 +13,7 @@ while read line
 do 
 	tstamp=`date +%m-%d-%y\ %k:%M`
 	FILENAME=$line"($tstamp)"    
-	traceroute -A $line > entryResults/"$FILENAME"
-
+	traceroute $line > entryResults/"$FILENAME"
 done < rand_entry.txt &
 
 # Performs traceroute to each Tor exit guard
@@ -22,7 +21,7 @@ while read line
 do 
 	DATE=`date +%m-%d-%y-%k:%M`
 	FILENAME=$line"($DATE)"    
-	traceroute -A $line > exitResults/"$FILENAME"
+	traceroute $line > exitResults/"$FILENAME"
 done < rand_exit.txt &
 
 # Converts to CSV 
