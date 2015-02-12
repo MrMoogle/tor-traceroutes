@@ -19,10 +19,7 @@ function nodeOp
 	scp -o ConnectTimeout=5 -r princeton_oscar@$1:entryResults $ENTRY_DIRNAME/$1 2> /dev/null 
   	scp -o ConnectTimeout=5 -r princeton_oscar@$1:exitResults $EXIT_DIRNAME/$1 2> /dev/null 
 	
-	if [ -e "$ENTRY_DIRNAME"/$1 ];
-	then
-	    ssh -n princeton_oscar@$1 "nohup bash trace.sh > /dev/null 2>&1"
-	fi 
+	ssh -n princeton_oscar@$1 "nohup bash trace.sh > /dev/null 2>&1"
 }
 
 cd
@@ -36,9 +33,11 @@ fi
 rm temp.txt
 
 # Copies traceroute data back to local machine
-while read line           
+while read PLNode           
 do
- 	nodeOp $line &
+ 	nodeOp $PLNode &
  	sleep 15
- 	echo $line >> logs/experiment"($DATE)"
+ 	echo $PLNode >> logs/experiment"($DATE)"
 done < nodes.txt
+
+rm nodes.txt 

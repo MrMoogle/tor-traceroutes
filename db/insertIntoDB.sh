@@ -39,7 +39,7 @@ function insert
 	query="INSERT INTO paths (tstamp, srcip, srcas, destip, destas, path, aspath, numases, type, valid) \
 		   VALUES (to_timestamp('$tstamp', 'MM-DD-YY-HH24:MI'), \
 		   		   '$srcIP', '$srcAS', '$destIP', '$destAS', '$path', '$aspath', $numases, '$type', $valid);"
-	psql -U oli -d raptor -w -c "$query"
+	psql -U oli -d raptor -w -c "$query" &
 
 	# For debug
 	# echo "$1"
@@ -56,6 +56,7 @@ function insert
 	# echo	
 }
 
+mkdir "~/data_raw/$type/$1"
 cd $1
 
 type="Entry"
@@ -65,12 +66,11 @@ then
 fi
 
 # For logging progress
-today=`date +%m-%d-%y_%k:%M`
-touch "$CURR_DIR"/logs/"$type$today"
+touch "$CURR_DIR"/logs/"$1"
 
 for host in *
 do
-	echo $host >> "$CURR_DIR"/logs/"$type$today"
+	echo $host >> "$CURR_DIR"/logs/"$1"
 
 	cd $host 
 
@@ -88,6 +88,9 @@ do
 		insert "$traceroute"
 	done
 
+	sleep 10
+	mv "$host" "~/data_raw/$type/$1/."
+	
 	cd ..
 done
 
