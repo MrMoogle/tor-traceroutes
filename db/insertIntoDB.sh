@@ -7,25 +7,26 @@
 
 CURR_DIR=`pwd`
 
+# Maps IP addreses to ASes
+declare -A ip_AS
+
 # Takes traceroute file and inserts it into DB 
 function insert
 {
-	srcIP=`sed -n 2p < "$1" | cut -d "(" -f2 | cut -d ")" -f1` 
-	if [ "$srcAS" = "*" ];
-	then
-		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
-	else 
-		srcAS=`sed -n 2p < "$1" | cut -d "[" -f2 | cut -d "]" -f1`
-	fi
-
 	destIP=`echo $1 | awk -F"/" '{print $NF}' | cut -f1 -d "("`
-	destAS="AS"`whois -h whois.cymru.com " -v $destIP" | tail -1 | cut -f1 -d" "`
-	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1`
+	destAS="${ip_AS["$destIP"]}"
+
+	if [ "$destAS" = "" ];
+	then 
+		destAS="AS"`whois -h whois.cymru.com " -v $destIP" | tail -1 | cut -f1 -d" "`
+		ip_AS["$destIP"]="$destAS"
+	fi 
+	
+	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1 | sed 's/-/ /3'`
 	path=`cat "$1"`
 
-	echo $path | grep -o '\[[AS[0-9\/]*]*\]' | awk '!x[$0]++' > temp.txt
-	aspath=`cat temp.txt` 
-	numases=`wc -l < temp.txt | tr -d " \t\n\r"` 
+	aspath=`grep -o '\[[AS[0-9\/]*]*\]' "$1" | awk '!x[$0]++'`
+	numases=`echo "$aspath" | wc -l | tr -d " \t\n\r"` 
 
 	# A traceroute is invalid if it has more than 2 routers that timed out
 	valid="true"
@@ -51,6 +52,7 @@ function insert
 	# echo "numases: $numases"
 	# echo "tstamp: $tstamp"
 	# echo "valid: $valid"
+	# echo "$path"
 	# echo	
 }
 
@@ -62,19 +64,31 @@ then
 	type="Exit"
 fi
 
+# For logging progress
+today=`date +%m-%d-%y_%k:%M`
+touch "$CURR_DIR"/logs/"$type$today"
+
 for host in *
 do
+	echo $host >> "$CURR_DIR"/logs/"$type$today"
+
 	cd $host 
+
+	# Finds srcIP and srcAS for host
+	srcIP="`dig +short $host`" 
+	traceroute=`ls -1 | head -1`
+	srcAS=`sed -n 2p < "$traceroute" | cut -d "[" -f2 | cut -d "]" -f1`
+	if [ "$srcAS" = "*" ];
+	then
+		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
+	fi
+
 	for traceroute in * 
 	do 
-		insert "$CURR_DIR/$1/$host/$traceroute" &
-		sleep 1
+		insert "$traceroute" &
 	done
 
 	cd ..
-	sleep 15
-	# rm -rf $host
 done
 
 cd ..
-# rmdir "$1"
