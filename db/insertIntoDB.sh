@@ -85,7 +85,7 @@ do
 
 	for traceroute in * 
 	do 
-		insert "$traceroute" &
+		insert "$traceroute"
 	done
 
 	cd ..
