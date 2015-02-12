@@ -85,8 +85,6 @@ do
 	do 
 		convert "$traceroute" 
 
-		#convert "$1/$host/$traceroute"
-
 		echo "$entry" | sed ':a;N;$!ba;s/\n/\\n/g'
 	done
 

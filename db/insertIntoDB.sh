@@ -56,7 +56,6 @@ function insert
 	# echo	
 }
 
-mkdir "~/data_raw/$type/$1"
 cd $1
 
 type="Entry"
@@ -64,6 +63,8 @@ if [[ $1 == *exit* ]];
 then
 	type="Exit"
 fi
+
+mkdir ~/data_raw/$type/"$1"
 
 # For logging progress
 touch "$CURR_DIR"/logs/"$1"
