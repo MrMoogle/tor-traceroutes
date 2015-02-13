@@ -71,8 +71,6 @@ touch "$CURR_DIR"/logs/"$1"
 
 for host in *
 do
-	echo $host >> "$CURR_DIR"/logs/"$1"
-
 	cd $host 
 
 	# Finds srcIP and srcAS for host
@@ -88,11 +86,12 @@ do
 	do 
 		insert "$traceroute"
 	done
-
-	sleep 10
-	mv "$host" ~/data_raw/$type/"$1"/.
 	
 	cd ..
+
+	sleep 10
+	echo $host >> "$CURR_DIR"/logs/"$1"
+	mv "$host" ~/data_raw/$type/"$1"/.
 done
 
 cd ..
