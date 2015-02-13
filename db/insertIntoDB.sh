@@ -90,7 +90,7 @@ do
 	done
 
 	sleep 10
-	mv "$host" "~/data_raw/$type/$1/."
+	mv "$host" ~/data_raw/$type/"$1"/.
 	
 	cd ..
 done
