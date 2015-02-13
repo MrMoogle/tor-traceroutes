@@ -95,3 +95,5 @@ do
 done
 
 cd ..
+
+rmdir $1

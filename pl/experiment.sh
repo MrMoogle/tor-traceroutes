@@ -8,8 +8,8 @@
 
 # Creates the name of the directory that we copy to
 DATE=`date +%m-%d-%y`
-ENTRY_DIRNAME=~/entryResults"($DATE)"
-EXIT_DIRNAME=~/exitResults"($DATE)"
+ENTRY_DIRNAME=entryResults"($DATE)"
+EXIT_DIRNAME=exitResults"($DATE)"
 mkdir $ENTRY_DIRNAME
 mkdir $EXIT_DIRNAME
 
@@ -41,3 +41,7 @@ do
 done < nodes.txt
 
 rm nodes.txt 
+
+# Inserts into DB
+bash tor-traceroutes/db/insertIntoDB.sh $ENTRY_DIRNAME &
+bash tor-traceroutes/db/insertIntoDB.sh $EXIT_DIRNAME & 
