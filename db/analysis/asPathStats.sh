@@ -25,7 +25,7 @@ do
 	do 
 		query="\copy (SELECT COUNT(DISTINCT aspath) FROM paths WHERE srcas='$srcas' AND destAS='$destas' AND valid = true) TO '~/aspath/$srcas-$destas'"
 		psql -U oli -d raptor -w -c "$query" &
-		sleep 1 # to avoid using up all the database
+		sleep 20 # to avoid using up all the database
 	done < destASes.txt
 done < destASes.txt
 
