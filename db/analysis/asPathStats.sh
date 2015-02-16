@@ -7,16 +7,16 @@
 #--------------------------------------------------------------
 
 # Gets all source ASes
-query="\copy (SELECT DISTINCT srcas FROM paths) TO ~/temp.txt"
-psql -U oli -d raptor -w -c "$query"
-grep -o "AS[0-9]\+" temp.txt > srcASes.txt # filters out potential bad data
-rm temp.txt
+# query="\copy (SELECT DISTINCT srcas FROM paths) TO ~/temp.txt"
+# psql -U oli -d raptor -w -c "$query"
+# grep -o "AS[0-9]\+" temp.txt > srcASes.txt # filters out potential bad data
+# rm temp.txt
 
-# Gets all destination ASes
-query="\copy (SELECT DISTINCT destas FROM paths) TO ~/temp.txt"
-psql -U oli -d raptor -w -c "$query"
-grep -o "AS[0-9]\+" temp.txt > destASes.txt # filters out potential bad data
-rm temp.txt
+# # Gets all destination ASes
+# query="\copy (SELECT DISTINCT destas FROM paths) TO ~/temp.txt"
+# psql -U oli -d raptor -w -c "$query"
+# grep -o "AS[0-9]\+" temp.txt > destASes.txt # filters out potential bad data
+# rm temp.txt
 
 mkdir aspath
 while read srcas
@@ -24,7 +24,7 @@ do
 	while read destas
 	do 
 		query="\copy (SELECT COUNT(DISTINCT aspath) FROM paths WHERE srcas='$srcas' AND destAS='$destas' AND valid = true) TO '~/aspath/$srcas-$destas'"
-		psql -U oli -d raptor -w -c "$query" &
+		psql -U oli -d raptor -w -c "$query"
 	done < destASes.txt
 done < destASes.txt
 
