@@ -6,25 +6,18 @@
 # Author: Oscar Li
 #--------------------------------------------------------------
 
-# Gets all source ASes
-# query="\copy (SELECT DISTINCT srcas FROM paths) TO ~/temp.txt"
-# psql -U oli -d raptor -w -c "$query"
-# grep -o "AS[0-9]\+" temp.txt > srcASes.txt # filters out potential bad data
-# rm temp.txt
-
-# # Gets all destination ASes
-# query="\copy (SELECT DISTINCT destas FROM paths) TO ~/temp.txt"
-# psql -U oli -d raptor -w -c "$query"
-# grep -o "AS[0-9]\+" temp.txt > destASes.txt # filters out potential bad data
-# rm temp.txt
+# Gets all source AS - destination AS pairs
+query="\copy (SELECT destas, srcas FROM paths WHERE valid=true GROUP BY destas, srcas) TO ~/temp.txt (DELIMITER '~');"
+psql -U oli -d raptor -w -c "$query"
+grep "AS[0-9]\+~AS[0-9]\+" temp.txt > asPairs.txt # filters out potential bad data
+rm temp.txt
 
 mkdir aspath
-while read srcas
+while read pair
 do
-	while read destas
-	do 
-		query="\copy (SELECT COUNT(DISTINCT aspath) FROM paths WHERE srcas='$srcas' AND destAS='$destas' AND valid = true) TO '~/aspath/$srcas-$destas'"
-		psql -U oli -d raptor -w -c "$query"
-	done < destASes.txt
-done < destASes.txt
+	srcas=`echo $pair | cut -d'~' -f1` 
+	destas=`echo $pair | cut -d'~' -f2`
+	query="\copy (SELECT COUNT(DISTINCT aspath) FROM paths WHERE srcas='$srcas' AND destAS='$destas' AND valid = true) TO '~/aspath/$srcas-$destas'"
+	psql -U oli -d raptor -w -c "$query"
+done < asPairs.txt
 
