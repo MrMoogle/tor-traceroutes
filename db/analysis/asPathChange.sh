@@ -2,21 +2,25 @@
 #--------------------------------------------------------------
 # Purpose: For every srcas-destas pair, calculates how many 
 # 			additional ASes appear on the path 
-# Execution: bash asPathChange.sh
+# Execution: bash asPathChange.sh > <output file>
 # Author: Oscar Li
 #--------------------------------------------------------------
 
-# Gets all source AS - destination AS pairs
-# query="\copy (SELECT DISTINCT srcas, destas FROM paths WHERE valid=true) TO ~/temp.txt (DELIMITER '~');"
-# psql -U oli -d raptor -w -c "$query"
-# grep "AS[0-9]\+~AS[0-9]\+" temp.txt > asPairs.txt # filters out potential bad data
-# rm temp.txt
-
-mkdir aspath
+mkdir asPathChange
 while read pair
 do
 	srcas=`echo $pair | cut -d'~' -f1` 
 	destas=`echo $pair | cut -d'~' -f2`
-	query="\copy (SELECT COUNT(DISTINCT aspath) FROM paths WHERE srcas='$srcas' AND destAS='$destas' AND valid = true) TO '~/aspath/$srcas-$destas'"
-	psql -U oli -d raptor -w -c "$query"
+	path="~/asPathChange/$srcas-$destas"
+
+	query="\copy (SELECT aspath FROM paths WHERE srcas='$srcas' AND destAS='$destas' AND valid = true) TO '$path'"	
+	psql -U oli -d raptor -w -c "$query" &
+
+	awk '{amount [$1]+=1} END 
+	 	 {for (name in amount) print name, amount[name] | "sort -k2 -nr"}' $path | sed 's/\\n/~/g' | cut -d' ' -f1 > $path.data
+	rm $path 
+	numASes=`python tor-traceroutes/db/analysis/asPathChange_CSV.py $path.data`
+
+	echo "$srcas \t $destas \t numASes"
 done < asPairs.txt
+
