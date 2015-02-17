@@ -2,7 +2,7 @@
 #--------------------------------------------------------------
 # Purpose: For every srcas-destas pair, calculates how often AS 
 #		   paths change
-# Execution: bash asPathStats.sh 
+# Execution: bash asPathCounts.sh
 # Author: Oscar Li
 #--------------------------------------------------------------
 

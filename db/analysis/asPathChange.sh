@@ -23,7 +23,3 @@ do
 
 	echo "$srcas $destas $numASes"
 done < asPairs.txt
-
-
-
-AS1 \t AS7540
