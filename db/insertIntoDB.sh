@@ -58,6 +58,10 @@ function insert
 
 cd $1
 
+# For some reason, we get these weird files that mess up the script. 
+# This command deletes those files
+find . -name "(*)" -exec rm '{}' \;
+
 type="Entry"
 if [[ $1 == *exit* ]];
 then
