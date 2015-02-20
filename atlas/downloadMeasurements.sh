@@ -60,10 +60,15 @@ do
 		dest="../../$outputFolder/$day/$set"
 		mkdir $dest
 
-		while read mNum
+		while read line
 		do 
-			download $mNum $dest & 
-			sleep 0.25
+			mNum=`echo $line | cut -f2 -d "[" | cut -f1 -d "]" | grep -o "^[0-9]\+"`
+			
+			if [ ! -z "$mNum" ];
+			then 
+				download $mNum $dest & 
+				sleep 0.25
+			fi
 		done < $set
 	done 
 

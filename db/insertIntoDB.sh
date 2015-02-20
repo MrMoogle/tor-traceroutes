@@ -13,7 +13,7 @@ declare -A ip_AS
 # Takes traceroute file and inserts it into DB 
 function insert
 {
-	destIP=`echo $1 | awk -F"/" '{print $NF}' | cut -f1 -d "("`
+	# destIP=`echo $1 | awk -F"/" '{print $NF}' | cut -f1 -d "("`
 	destAS="${ip_AS["$destIP"]}"
 
 	if [ "$destAS" = "" ];
@@ -39,28 +39,28 @@ function insert
 	query="INSERT INTO paths (tstamp, srcip, srcas, destip, destas, path, aspath, numases, type, valid) \
 		   VALUES (to_timestamp('$tstamp', 'MM-DD-YY-HH24:MI'), \
 		   		   '$srcIP', '$srcAS', '$destIP', '$destAS', '$path', '$aspath', $numases, '$type', $valid);"
-	psql -U oli -d raptor -w -c "$query" &
+	#psql -U oli -d raptor -w -c "$query" &
 
 	# For debug
-	# echo "$1"
-	# echo "HOST: $host"
-	# echo "srcIP: $srcIP"
-	# echo "srcAS: $srcAS"
-	# echo "destIP: $destIP"
-	# echo "destAS: $destAS"
-	# echo "aspath: $aspath"
-	# echo "numases: $numases"
-	# echo "tstamp: $tstamp"
-	# echo "valid: $valid"
-	# echo "$path"
-	# echo	
+	echo "$1"
+	echo "HOST: $host"
+	echo "srcIP: $srcIP"
+	echo "srcAS: $srcAS"
+	echo "destIP: $destIP"
+	echo "destAS: $destAS"
+	echo "aspath: $aspath"
+	echo "numases: $numases"
+	echo "tstamp: $tstamp"
+	echo "valid: $valid"
+	echo "$path"
+	echo	
 }
 
 cd $1
 
 # For some reason, we get these weird files that mess up the script. 
 # This command deletes those files
-find . -name "(*)" -exec rm '{}' \;
+find . -name "(02*)" -exec rm '{}' \;
 
 type="Entry"
 if [[ $1 == *exit* ]];
@@ -86,9 +86,10 @@ do
 		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
 	fi
 
-	for traceroute in * 
+	for destIP in * 
 	do 
 		insert "$traceroute"
+		#sleep 0.25
 	done
 	
 	cd ..
