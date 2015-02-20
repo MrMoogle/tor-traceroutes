@@ -30,18 +30,3 @@ with Controller.from_port(port = 9051) as controller:
 
 # Closes file 
 f.close()
-
-# Opens file to read
-f = open(sys.argv[1], "r+")
-
-# Reads and sorts all lines
-lines = [line for line in f if line.strip()]
-f.close()
-lines.sort()
-
-# Removes duplicates and prints
-prevLine = ""
-for l in lines:
-	if l != prevLine:
-		sys.stdout.write(l)
-	prevLine = l
