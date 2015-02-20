@@ -75,6 +75,7 @@ touch "$CURR_DIR"/logs/"$1"
 
 for host in *
 do
+	echo $host 
 	cd $host 
 
 	# Finds srcIP and srcAS for host
@@ -88,10 +89,12 @@ do
 
 	for destIP in * 
 	do 
+		echo $destIP
 		cd $destIP
 
 		for traceroute in *
 		do 
+			echo $traceroute
 			insert "$traceroute"
 		done 
 
