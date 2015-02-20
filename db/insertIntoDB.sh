@@ -88,7 +88,10 @@ do
 
 	for destIP in * 
 	do 
-		insert "$traceroute"
+		for traceroute in *
+		do 
+			insert "$traceroute"
+		done 
 		#sleep 0.25
 	done
 	
