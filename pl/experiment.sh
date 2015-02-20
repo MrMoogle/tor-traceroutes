@@ -43,5 +43,5 @@ done < nodes.txt
 rm nodes.txt 
 
 # Inserts into DB
-bash tor-traceroutes/db/insertIntoDB.sh $ENTRY_DIRNAME &
-bash tor-traceroutes/db/insertIntoDB.sh $EXIT_DIRNAME & 
+#bash tor-traceroutes/db/insertIntoDB.sh $ENTRY_DIRNAME &
+#bash tor-traceroutes/db/insertIntoDB.sh $EXIT_DIRNAME & 

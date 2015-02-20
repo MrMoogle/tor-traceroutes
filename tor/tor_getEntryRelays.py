@@ -1,7 +1,8 @@
 # --------------------------------------------------------
-# Purpose: Updates file with new Tor entry guards
+# Purpose: Appends all Tor entry relays to a file
 # Execution: python tor_getEntryRelays.py Entryguards.txt
 # Notes: Make sure Tor control port is running
+# Use awk to remove duplicates
 # --------------------------------------------------------
 
 from stem.control import Controller
