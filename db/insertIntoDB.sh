@@ -39,21 +39,21 @@ function insert
 	query="INSERT INTO paths (tstamp, srcip, srcas, destip, destas, path, aspath, numases, type, valid) \
 		   VALUES (to_timestamp('$tstamp', 'MM-DD-YY-HH24:MI'), \
 		   		   '$srcIP', '$srcAS', '$destIP', '$destAS', '$path', '$aspath', $numases, '$type', $valid);"
-	#psql -U oli -d raptor -w -c "$query" &
+	psql -U oli -d raptor -w -c "$query"
 
 	# For debug
-	echo "$1"
-	echo "HOST: $host"
-	echo "srcIP: $srcIP"
-	echo "srcAS: $srcAS"
-	echo "destIP: $destIP"
-	echo "destAS: $destAS"
-	echo "aspath: $aspath"
-	echo "numases: $numases"
-	echo "tstamp: $tstamp"
-	echo "valid: $valid"
-	echo "$path"
-	echo	
+	# echo "$1"
+	# echo "HOST: $host"
+	# echo "srcIP: $srcIP"
+	# echo "srcAS: $srcAS"
+	# echo "destIP: $destIP"
+	# echo "destAS: $destAS"
+	# echo "aspath: $aspath"
+	# echo "numases: $numases"
+	# echo "tstamp: $tstamp"
+	# echo "valid: $valid"
+	# echo "$path"
+	# echo	
 }
 
 cd $1
@@ -75,7 +75,6 @@ touch "$CURR_DIR"/logs/"$1"
 
 for host in *
 do
-	echo $host 
 	cd $host 
 
 	# Finds srcIP and srcAS for host
@@ -89,17 +88,15 @@ do
 
 	for destIP in * 
 	do 
-		echo $destIP
 		cd $destIP
 
 		for traceroute in *
 		do 
-			echo $traceroute
-			insert "$traceroute"
+			insert "$traceroute" & 
+			sleep 0.25
 		done 
 
 		cd ..
-		#sleep 0.25
 	done
 	
 	cd ..
