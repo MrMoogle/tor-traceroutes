@@ -5,8 +5,8 @@ rm -rf entryResults exitResults
 mkdir entryResults exitResults
 
 # Prevent accidental DDOS
-shuf entryNodes.txt > rand_entry.txt
-shuf exitNodes.txt > rand_exit.txt  
+shuf entryRelays.txt > rand_entry.txt
+shuf exitRelays.txt > rand_exit.txt  
 
 # Performs traceroute to each Tor entry guard
 while read line           
@@ -23,5 +23,3 @@ do
 	FILENAME=$line"($DATE)"    
 	traceroute $line > exitResults/"$FILENAME"
 done < rand_exit.txt &
-
-# Converts to CSV 

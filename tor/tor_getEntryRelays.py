@@ -1,6 +1,6 @@
 # --------------------------------------------------------
 # Purpose: Updates file with new Tor entry guards
-# Execution: python tor_controller.py Entryguards.txt
+# Execution: python tor_getEntryRelays.py Entryguards.txt
 # Notes: Make sure Tor control port is running
 # --------------------------------------------------------
 
@@ -24,8 +24,7 @@ with Controller.from_port(port = 9051) as controller:
 		if "Guard" in line:
 			match = re.search(r'\d+\.\d+\.\d+\.\d+', prevLine)
 			if match:
-				f.write(match.group())
-				f.write('\n')
+				f.write(match.group() + "\n")
 
 		prevLine = line
 
