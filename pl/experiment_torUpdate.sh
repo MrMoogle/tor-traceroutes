@@ -29,7 +29,6 @@ rm temp.txt
 # Copies list of Tor entry/exit relays to PL nodes 
 while read plNode           
 do
- 	scp ~/backup/exitRelays.txt princeton_oscar@$plNode:. &
- 	scp ~/backup/entryRelays.txt princeton_oscar@$plNode:. &
- 	sleep 0.25
+ 	scp ~/backup/exitRelays.txt princeton_oscar@$plNode:.
+ 	scp ~/backup/entryRelays.txt princeton_oscar@$plNode:.
 done < nodes.txt
