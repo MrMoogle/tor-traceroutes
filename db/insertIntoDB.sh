@@ -76,10 +76,8 @@ then
 	type="Exit"
 fi
 
-mkdir ~/data_raw/"$type"/"$1"
-
 # For logging progress
-touch "$CURR_DIR"/logs/"$1"
+touch "$CURR_DIR"/logs/`basename "$1"`
 
 for host in *
 do
@@ -87,8 +85,7 @@ do
 
 	# Finds srcIP and srcAS for host
 	srcIP="`dig +short $host`" 
-	traceroute=`ls -1 | head -1`
-	srcAS=`sed -n 2p < "$traceroute" | cut -d "[" -f2 | cut -d "]" -f1`
+	srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
 	if [ "$srcAS" = "*" ];
 	then
 		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
