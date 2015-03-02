@@ -13,7 +13,9 @@ declare -A ip_AS
 # Takes traceroute file and inserts it into DB 
 function insert
 {
-	# destIP=`echo $1 | awk -F"/" '{print $NF}' | cut -f1 -d "("`
+	file=$1
+
+	destIP=`echo $1 | awk -F"/" '{print $NF}' | cut -f1 -d "("`
 	destAS="${ip_AS["$destIP"]}"
 
 	if [ "$destAS" = "" ];
@@ -25,12 +27,17 @@ function insert
 	tstamp=`echo $1 | cut -d "(" -f2 | cut -d ")" -f1 | sed 's/-/ /3'`
 	path=`cat "$1"`
 
-	aspath=`grep -o '\[[AS[0-9\/]*]*\]' "$1" | awk '!x[$0]++'`
+	# Extracts AS level path
+	echo "begin" > "temp_$file"
+	grep -o "[0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+" "$file" >> "temp_$file"
+	echo "end" >> "temp_$file"
+	aspath=`nc whois.cymru.com 43 < "temp_$file" | awk '{print $1}' | awk '!x[$0]++' | tail -n +2 | grep -o "[0-9]\+" | sed 's/$/]/' | sed 's/^/[AS/'`
+
 	numases=`echo "$aspath" | wc -l | tr -d " \t\n\r"` 
 
 	# A traceroute is invalid if it has more than 2 routers that timed out
 	valid="true"
-	if [ `grep -o "\* \* \*" "$1" | wc -l` -ge 2 ]; 
+	if [ `grep -o "\* \* \*" "$file" | wc -l` -ge 2 ]; 
 	then 
 		valid="false"
 	fi 
@@ -39,28 +46,28 @@ function insert
 	query="INSERT INTO paths (tstamp, srcip, srcas, destip, destas, path, aspath, numases, type, valid) \
 		   VALUES (to_timestamp('$tstamp', 'MM-DD-YY-HH24:MI'), \
 		   		   '$srcIP', '$srcAS', '$destIP', '$destAS', '$path', '$aspath', $numases, '$type', $valid);"
-	psql -U oli -d raptor -w -c "$query"
+	# psql -U oli -d raptor -w -c "$query" &
 
 	# For debug
-	# echo "$1"
-	# echo "HOST: $host"
-	# echo "srcIP: $srcIP"
-	# echo "srcAS: $srcAS"
-	# echo "destIP: $destIP"
-	# echo "destAS: $destAS"
-	# echo "aspath: $aspath"
-	# echo "numases: $numases"
-	# echo "tstamp: $tstamp"
-	# echo "valid: $valid"
-	# echo "$path"
-	# echo	
+	echo "$1"
+	echo "HOST: $host"
+	echo "srcIP: $srcIP"
+	echo "srcAS: $srcAS"
+	echo "destIP: $destIP"
+	echo "destAS: $destAS"
+	echo "aspath: $aspath"
+	echo "numases: $numases"
+	echo "tstamp: $tstamp"
+	echo "valid: $valid"
+	echo "$path"
+	echo	
 }
 
 cd $1
 
 # For some reason, we get these weird files that mess up the script. 
 # This command deletes those files
-find . -name "(02*)" -exec rm '{}' \;
+find . -name "(*)" -exec rm '{}' \;
 
 type="Entry"
 if [[ $1 == *exit* ]];
@@ -86,17 +93,9 @@ do
 		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
 	fi
 
-	for destIP in * 
+	for traceroute in * 
 	do 
-		cd $destIP
-
-		for traceroute in *
-		do 
-			insert "$traceroute" & 
-			sleep 0.25
-		done 
-
-		cd ..
+		insert "$traceroute"
 	done
 	
 	cd ..
