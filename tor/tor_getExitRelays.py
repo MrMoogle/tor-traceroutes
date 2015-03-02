@@ -22,7 +22,7 @@ with Controller.from_port(port = 9051) as controller:
 
 	prevLine = ""
 	for line in buf:
-		if "Exit" in line:
+		if "Exit" in line and "Guard" not in line:
 			match = re.search(r'\d+\.\d+\.\d+\.\d+', prevLine)
 			if match:
 				f.write(match.group() + '\n')

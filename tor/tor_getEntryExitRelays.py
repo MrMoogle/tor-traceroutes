@@ -1,8 +1,8 @@
 # --------------------------------------------------------
-# Purpose: Appends all Tor entry relays to a file
-# Execution: python tor_getEntryRelays.py Entryguards.txt
+# Purpose: Appends all Tor relays that are both exit and entry relays to a file
+# Execution: python tor_getEntryExitRelays entryExitRelays.txt
 # Notes: Make sure Tor control port is running
-# Use awk to remove duplicates
+#        Use awk to remove duplicates
 # --------------------------------------------------------
 
 from stem.control import Controller
@@ -22,10 +22,10 @@ with Controller.from_port(port = 9051) as controller:
 
 	prevLine = ""
 	for line in buf:
-		if "Guard" in line and "Exit" not in line:
+		if "Exit" in line and "Guard" in line:
 			match = re.search(r'\d+\.\d+\.\d+\.\d+', prevLine)
 			if match:
-				f.write(match.group() + "\n")
+				f.write(match.group() + '\n')
 
 		prevLine = line
 
