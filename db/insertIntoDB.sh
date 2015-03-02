@@ -47,7 +47,7 @@ function insert
 	query="INSERT INTO paths (tstamp, srcip, srcas, destip, destas, path, aspath, numases, type, valid) \
 		   VALUES (to_timestamp('$tstamp', 'MM-DD-YY-HH24:MI'), \
 		   		   '$srcIP', '$srcAS', '$destIP', '$destAS', '$path', '$aspath', $numases, '$type', $valid);"
-	psql -U oli -d raptor -w -c "$query" &
+	psql -U oli -d raptor -w -c "$query"
 
 	# For debug
 	# echo "$1"
@@ -94,7 +94,8 @@ do
 	# Doing this completely in parallel is a bad idea
 	for traceroute in * 
 	do 
-		insert "$traceroute"
+		insert "$traceroute" &
+		sleep 0.5
 	done
 	
 	cd ..
