@@ -10,14 +10,18 @@
 DATE=`date +%m-%d-%y`
 ENTRY_DIRNAME=entryResults"($DATE)"
 EXIT_DIRNAME=exitResults"($DATE)"
+ENTRYEXIT_DIRNAME=entryExitResults"($DATE)"
+
 mkdir $ENTRY_DIRNAME
 mkdir $EXIT_DIRNAME
+mkdir $ENTRYEXIT_DIRNAME
 
 # Copies back the traceroute data, deletes it, and runs a new traceroute job
 function nodeOp 
 {
 	scp -o ConnectTimeout=5 -r princeton_oscar@$1:entryResults $ENTRY_DIRNAME/$1 2> /dev/null 
   	scp -o ConnectTimeout=5 -r princeton_oscar@$1:exitResults $EXIT_DIRNAME/$1 2> /dev/null 
+  	scp -o ConnectTimeout=5 -r princeton_oscar@$1:entryExitResults $ENTRYEXIT_DIRNAME/$1 2> /dev/null 
 	
 	ssh -n princeton_oscar@$1 "nohup bash trace.sh > /dev/null 2>&1"
 }

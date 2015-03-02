@@ -70,10 +70,13 @@ cd $1
 # This command deletes those files
 find . -name "(*)" -exec rm '{}' \;
 
-type="Entry"
-if [[ $1 == *exit* ]];
+if [[ $1 == *entryExit* ]];
 then
+	type="Entry/Exit"
+elif [[ $1 == *exit* ]]
 	type="Exit"
+else
+	type="Entry"
 fi
 
 # For logging progress
@@ -86,12 +89,8 @@ do
 	# Finds srcIP and srcAS for host
 	srcIP="`dig +short $host`" 
 	srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
-	if [ "$srcAS" = "*" ];
-	then
-		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
-	fi
-
-	# Doing this completely in parallel is a bad idea
+	
+	# Doing this completely in parallel is a bad idea, therefore we sleep
 	for traceroute in * 
 	do 
 		insert "$traceroute" &
