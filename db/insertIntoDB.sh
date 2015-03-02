@@ -32,6 +32,7 @@ function insert
 	grep -o "[0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+" "$file" >> "temp_$file"
 	echo "end" >> "temp_$file"
 	aspath=`nc whois.cymru.com 43 < "temp_$file" | awk '{print $1}' | awk '!x[$0]++' | tail -n +2 | grep -o "[0-9]\+" | sed 's/$/]/' | sed 's/^/[AS/'`
+	rm "temp_$file"
 
 	numases=`echo "$aspath" | wc -l | tr -d " \t\n\r"` 
 
@@ -46,21 +47,21 @@ function insert
 	query="INSERT INTO paths (tstamp, srcip, srcas, destip, destas, path, aspath, numases, type, valid) \
 		   VALUES (to_timestamp('$tstamp', 'MM-DD-YY-HH24:MI'), \
 		   		   '$srcIP', '$srcAS', '$destIP', '$destAS', '$path', '$aspath', $numases, '$type', $valid);"
-	# psql -U oli -d raptor -w -c "$query" &
+	psql -U oli -d raptor -w -c "$query" &
 
 	# For debug
-	echo "$1"
-	echo "HOST: $host"
-	echo "srcIP: $srcIP"
-	echo "srcAS: $srcAS"
-	echo "destIP: $destIP"
-	echo "destAS: $destAS"
-	echo "aspath: $aspath"
-	echo "numases: $numases"
-	echo "tstamp: $tstamp"
-	echo "valid: $valid"
-	echo "$path"
-	echo	
+	# echo "$1"
+	# echo "HOST: $host"
+	# echo "srcIP: $srcIP"
+	# echo "srcAS: $srcAS"
+	# echo "destIP: $destIP"
+	# echo "destAS: $destAS"
+	# echo "aspath: $aspath"
+	# echo "numases: $numases"
+	# echo "tstamp: $tstamp"
+	# echo "valid: $valid"
+	# echo "$path"
+	# echo	
 }
 
 cd $1
@@ -93,6 +94,7 @@ do
 		srcAS="AS"`whois -h whois.cymru.com " -v $srcIP" | tail -1 | cut -f1 -d" "`
 	fi
 
+	# Doing this completely in parallel is a bad idea
 	for traceroute in * 
 	do 
 		insert "$traceroute"
@@ -100,9 +102,9 @@ do
 	
 	cd ..
 
-	sleep 10
+	sleep 5
 	echo $host >> "$CURR_DIR"/logs/"$1"
-	mv "$host" ~/data_raw/$type/"$1"/.
+	rm -rf "$host" & 
 done
 
 cd ..
