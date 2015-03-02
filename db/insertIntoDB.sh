@@ -95,7 +95,7 @@ do
 	for traceroute in * 
 	do 
 		insert "$traceroute" &
-		sleep 0.5
+		sleep 0.75
 	done
 	
 	cd ..
