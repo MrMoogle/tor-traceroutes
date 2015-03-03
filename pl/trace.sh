@@ -31,4 +31,4 @@ do
 	tstamp=`date +%m-%d-%y-%k:%M`
 	FILENAME=$line"($tstamp)"    
 	traceroute $line > entryExitResults/"$FILENAME"
-done < rand_exit.txt &
+done < rand_entryExit.txt &
