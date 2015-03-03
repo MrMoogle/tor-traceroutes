@@ -74,6 +74,7 @@ if [[ $1 == *entryExit* ]];
 then
 	type="Entry/Exit"
 elif [[ $1 == *exit* ]]
+then
 	type="Exit"
 else
 	type="Entry"
