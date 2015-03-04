@@ -72,7 +72,7 @@ find . -name "(*)" -exec rm '{}' \;
 
 if [[ $1 == *entryExit* ]];
 then
-	type="Entry/Exit"
+	type="Both"
 elif [[ $1 == *exit* ]]
 then
 	type="Exit"
@@ -81,7 +81,8 @@ else
 fi
 
 # For logging progress
-touch "$CURR_DIR"/logs/`basename "$1"`
+base=`basename "$1"`
+touch "$CURR_DIR"/logs/$base
 
 for host in *
 do
@@ -101,7 +102,7 @@ do
 	cd ..
 
 	sleep 5
-	echo $host >> "$CURR_DIR"/logs/"$1"
+	echo $host >> "$CURR_DIR"/logs/$base
 	rm -rf "$host" & 
 done
 
