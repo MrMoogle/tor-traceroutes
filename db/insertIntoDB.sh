@@ -29,7 +29,7 @@ function insert
 
 	# Extracts AS level path
 	echo "begin" > "temp_$file"
-	grep -o "[0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+" "$file" >> "temp_$file"
+	tail -n +2 "$file" | grep -o "[0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+" >> "temp_$file"
 	echo "end" >> "temp_$file"
 	aspath=`nc whois.cymru.com 43 < "temp_$file" | awk '{print $1}' | awk '!x[$0]++' | tail -n +2 | grep -o "[0-9]\+" | sed 's/$/]/' | sed 's/^/[AS/'`
 	rm "temp_$file"
