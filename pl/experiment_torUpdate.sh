@@ -26,6 +26,7 @@ mv ~/backup/temp_entryExitRelays.txt ~/backup/entryExitRelays.txt
 # Copies list of Tor entry/exit relays to PL nodes 
 while read plNode           
 do
- 	scp -o ConnectTimeout=10 ~/backup/exitRelays.txt ~/backup/entryRelays.txt ~/backup/entryExitRelays.txt princeton_oscar@$plNode:. &
+	echo $plNode
+ 	scp -o BatchMode=yes ConnectTimeout=10 ~/backup/exitRelays.txt ~/backup/entryRelays.txt ~/backup/entryExitRelays.txt princeton_oscar@$plNode:. &
  	sleep 0.5
 done < backup/allNodes.txt
