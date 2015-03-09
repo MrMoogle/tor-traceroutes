@@ -23,16 +23,9 @@ python ~/tor-traceroutes/tor/tor_getEntryExitRelays.py ~/backup/entryExitRelays.
 awk '!x[$0]++' ~/backup/entryExitRelays.txt > ~/backup/temp_entryExitRelays.txt
 mv ~/backup/temp_entryExitRelays.txt ~/backup/entryExitRelays.txt
 
-# Gets list of active PL nodes
-python tor-traceroutes/pl/retrieveActiveNodes.py > temp.txt
-if ((`wc -l < temp.txt` > 0));
-then
-  sort temp.txt > nodes.txt
-fi 
-rm temp.txt
-
 # Copies list of Tor entry/exit relays to PL nodes 
 while read plNode           
 do
- 	scp ~/backup/exitRelays.txt ~/backup/entryRelays.txt ~/backup/entryExitRelays.txt princeton_oscar@$plNode:.
-done < nodes.txt
+ 	scp -o ConnectTimeout=10 ~/backup/exitRelays.txt ~/backup/entryRelays.txt ~/backup/entryExitRelays.txt princeton_oscar@$plNode:. &
+ 	sleep 0.5
+done < backup/allNodes.txt
