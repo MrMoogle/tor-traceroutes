@@ -28,23 +28,13 @@ function nodeOp
 
 cd
 
-# Gets list of active PL nodes
-python tor-traceroutes/pl/retrieveActiveNodes.py > temp.txt
-if ((`wc -l < temp.txt` > 0));
-then
-  sort temp.txt > nodes.txt
-fi 
-rm temp.txt
-
 # Copies traceroute data back to local machine
 while read PLNode           
 do
  	nodeOp $PLNode &
  	sleep 15
  	echo $PLNode >> logs/experiment"($DATE)"
-done < nodes.txt
-
-rm nodes.txt 
+done < backup/allNodes.txt
 
 # Inserts into DB
 #bash tor-traceroutes/db/insertIntoDB.sh $ENTRY_DIRNAME &
