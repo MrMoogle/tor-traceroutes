@@ -2,6 +2,8 @@
 # Purpose: Retrieves and prints all active PL nodes from 
 #          PLE and PLC to stdout
 # Execution: python retrieveActiveNoes.py
+# Deprecated: http://monitor.planet-lab.org/monitor/query
+# 				is down
 # --------------------------------------------------------
 
 import urllib

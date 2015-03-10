@@ -109,9 +109,6 @@ for i in range(0, length):
 	# Can comment out the last three lines if you want to do non-assymetric 
 	# analysis
 	analyze(dataset1, dataset2, False, False)
-	analyze(dataset4, dataset3, True, True)
-	analyze(dataset4, dataset2, True, False)
-	analyze(dataset1, dataset3, False, True)
 
 	percent = 1.0 * len(compromisedCircuits) / len(circuits)
 	print "Day " + str(i + 1) + ": " + str(len(compromisedCircuits)) + " / " + str(len(circuits)) + " = " + str(percent)
