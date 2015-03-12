@@ -19,7 +19,7 @@ function convert # (filepath, destIP, destAS, type) #
 	path=`cat $filePath`
 	file=`basename $1`
 	destIP=$2
-	destAS=$3
+	destAS="AS"$3
 	type=$4
 	tstamp=`date +%m-%d-%y\ %k:%M`
 

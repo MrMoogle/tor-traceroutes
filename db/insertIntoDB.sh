@@ -50,18 +50,18 @@ function insert
 	psql -U oli -d raptor -w -c "$query"
 
 	# For debug
-	# echo "$1"
-	# echo "HOST: $host"
-	# echo "srcIP: $srcIP"
-	# echo "srcAS: $srcAS"
-	# echo "destIP: $destIP"
-	# echo "destAS: $destAS"
-	# echo "aspath: $aspath"
-	# echo "numases: $numases"
-	# echo "tstamp: $tstamp"
-	# echo "valid: $valid"
-	# echo "$path"
-	# echo	
+	echo "$1"
+	echo "HOST: $host"
+	echo "srcIP: $srcIP"
+	echo "srcAS: $srcAS"
+	echo "destIP: $destIP"
+	echo "destAS: $destAS"
+	echo "aspath: $aspath"
+	echo "numases: $numases"
+	echo "tstamp: $tstamp"
+	echo "valid: $valid"
+	echo "$path"
+	echo	
 }
 
 cd $1
