@@ -1,6 +1,7 @@
 #!/bin/bash
 
 rm -rf entryResults exitResults entryExitResults temp
+rm entry.csv exit.csv entryExit.csv 
 
 mkdir entryResults exitResults entryExitResults temp
 
@@ -33,7 +34,7 @@ function convert # (filepath, destIP, destAS, type) #
 
 	# A traceroute is invalid if it has more than 2 routers that timed out
 	valid="true"
-	if [ `grep -o "\* \* \*" "$filePath" | wc -l` -ge 2 ]; 
+	if [ `grep -o "\* \* \*" "$filePath" | wc -l` -ge 3 ]; 
 	then 
 		valid="false"
 	fi 
