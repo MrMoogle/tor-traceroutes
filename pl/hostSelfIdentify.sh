@@ -8,6 +8,6 @@
 #--------------------------------------------------------------
 
 IP=`curl -s http://whatismijnip.nl | cut -d " " -f 5`
-AS=`traceroute -A $IP | cut -d "[" -f2 | cut -d "]" -f1` 
+AS=`traceroute -A $IP | tail -1 | cut -d "[" -f2 | cut -d "]" -f1` 
 
 echo "$AS $IP" > info.txt 
