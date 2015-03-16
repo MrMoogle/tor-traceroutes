@@ -20,7 +20,7 @@ mkdir $ENTRYEXIT_DIRNAME
 function nodeOp 
 {
 	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:entry.csv $ENTRY_DIRNAME/$1 2> /dev/null 
-  	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:exit.csv$EXIT_DIRNAME/$1 2> /dev/null 
+  	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:exit.csv $EXIT_DIRNAME/$1 2> /dev/null 
   	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:entryExit.csv $ENTRYEXIT_DIRNAME/$1 2> /dev/null 
 	
 	ssh -n princeton_oscar@$1 "nohup bash trace.sh > /dev/null 2>&1"
@@ -35,3 +35,5 @@ do
  	sleep 5
  	echo $PLNode >> logs/experiment"($DATE)"
 done < backup/allNodes.txt
+
+# Inserts data into database 
