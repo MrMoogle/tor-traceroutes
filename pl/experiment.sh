@@ -20,6 +20,7 @@ mkdir $ENTRYEXIT_DIRNAME
 function nodeOp 
 {
 	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:entry.csv $ENTRY_DIRNAME/$1 2> /dev/null 
+#
   	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:exit.csv $EXIT_DIRNAME/$1 2> /dev/null 
   	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:entryExit.csv $ENTRYEXIT_DIRNAME/$1 2> /dev/null 
 	
@@ -31,9 +32,12 @@ cd
 # Copies traceroute data back to local machine
 while read PLNode           
 do
- 	nodeOp $PLNode &
+ 	nodeOp $PLNode
  	sleep 5
  	echo $PLNode >> logs/experiment"($DATE)"
 done < backup/allNodes.txt
 
 # Inserts data into database 
+bash tor-traceroutes/db/insertIntoDB.sh $ENTRY_DIRNAME
+bash tor-traceroutes/db/insertIntoDB.sh $EXIT_DIRNAME
+bash tor-traceroutes/db/insertIntoDB.sh $ENTRYEXIT_DIRNAME

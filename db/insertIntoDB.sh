@@ -32,7 +32,6 @@ for host in *
 do
 	psql -U oli -d raptor -w -c "\copy paths from '$CURR_DIR/$DATA_FOLDER/$host' (DELIMITER '~')"
 	echo $host >> "$CURR_DIR"/logs/$base
-	rm $host 
 done
 
 cd ..
