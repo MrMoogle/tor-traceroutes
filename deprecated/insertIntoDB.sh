@@ -105,7 +105,7 @@ do
 
 	sleep 5
 	echo $host >> "$CURR_DIR"/logs/$base
-	rm -rf "$host" & 
+	rmdir "$host" & 
 done
 
 cd ..
