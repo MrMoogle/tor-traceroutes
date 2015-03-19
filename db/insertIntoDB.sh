@@ -18,9 +18,15 @@ find $DATA_FOLDER -name "(*)" -exec rm '{}' \;
 base=`basename "$DATA_FOLDER"`
 touch "$CURR_DIR"/logs/$base
 
+# For backup purposes 
+mkdir ~/data_raw 
+mkdir ~/data_raw/"$base"
+
 for host in *
 do
 	psql -U oli -d raptor -w -c "\copy paths from '$CURR_DIR/$DATA_FOLDER/$host' (DELIMITER '~')"
+	mv $host ~/data_raw/"$base"/.
+	
 	echo $host >> "$CURR_DIR"/logs/$base
 done
 

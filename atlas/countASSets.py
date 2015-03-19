@@ -1,7 +1,7 @@
 # --------------------------------------------------------
-# Purpose: Calculates percentage of Tor circuits are vulnerable
-# 			to AS level attacks (this time with assymetric analysis)
-# Execution: python quantify.py <set 1> <set 2> <set 3> <set 4>
+# Purpose: For debugging, finds the client, guard, exit, 
+#			and destination ASes 
+# Execution: python countASSets.py <set 1> <set 2> <set 3> <set 4>
 #
 # Notes: Meant for use with atlas results
 # --------------------------------------------------------
@@ -10,21 +10,10 @@ import glob
 import sys
 import os
 
-compromisedCircuits = set()
-circuits = set()
-as_circuitIDPairs = dict() 
-
-# Given a set of ASes and a circuit ID, adds AS - Circuit ID pairs
-# to as_circuitIDPairs 
-def addToAS_circuitIDPairs(asSet, circuitID):
-	global as_circuitIDPairs
-
-	for AS in asSet:
-		if AS in as_circuitIDPairs:
-			as_circuitIDPairs[AS].add(circuitID)
-		else:
-			as_circuitIDPairs[AS] = set() 
-
+client = set()
+guard = set()
+exit = set()
+dest = set()
 
 # Given a file, returns an array in which each element
 # contains a line of the file
@@ -79,8 +68,7 @@ def format(name, reverse):
 
 
 def analyze(d1, d2, format1, format2):
-	global compromisedCircuits
-	global circuits
+	global client, guard, exit, dest 
 
 	for aspath1 in d1:
 		srcDest1 = format(aspath1, format1)
@@ -95,24 +83,20 @@ def analyze(d1, d2, format1, format2):
 			f2 = open(aspath2, 'r')
 			s2 = makeSet(f2)
 			f2.close()
-
-			circuit_id = srcDest1 + "_" + srcDest2
-
-			addToAS_circuitIDPairs(s1, circuit_id)
-			addToAS_circuitIDPairs(s2, circuit_id)
-
-			circuits.add(circuit_id)
 			
-			# If the two sets of ASes are not disjoint (i.e. they 
-			# have a common AS), the circuit can be compromised.
-			if not s1.isdisjoint(s2):
-				compromisedCircuits.add(circuit_id)
+			entry_segment = srcDest1.split("-")
+			exit_segment = srcDest2.split("-")
+
+			client.add(entry_segment[0])
+			guard.add(entry_segment[1])
+			exit.add(exit_segment[0])
+			dest.add(exit_segment[1])
 
 # Contains the file paths to each day's set 
 arr1 = fileToArray(open(sys.argv[1]))
 arr2 = fileToArray(open(sys.argv[2]))
-arr3 = fileToArray(open(sys.argv[3]))
-arr4 = fileToArray(open(sys.argv[4]))
+# arr3 = fileToArray(open(sys.argv[3]))
+# arr4 = fileToArray(open(sys.argv[4]))
 
 # length should be the same for both arrays
 length = len(arr1)
@@ -120,8 +104,8 @@ length = len(arr1)
 for i in range(0, length):
 	dataset1 = glob.glob(arr1[i] + "/*")
 	dataset2 = glob.glob(arr2[i] + "/*")
-	dataset3 = glob.glob(arr3[i] + "/*")
-	dataset4 = glob.glob(arr4[i] + "/*")
+	# dataset3 = glob.glob(arr3[i] + "/*")
+	# dataset4 = glob.glob(arr4[i] + "/*")
 
 	# Can comment out the last three lines if you want to do non-assymetric 
 	# analysis
@@ -130,10 +114,8 @@ for i in range(0, length):
 	# analyze(dataset4, dataset2, True, False)
 	# analyze(dataset1, dataset3, False, True)
 
-	percent = 1.0 * len(compromisedCircuits) / len(circuits)
-	print "Day " + str(i + 1) + ": " + str(len(compromisedCircuits)) + " / " + str(len(circuits)) + " = " + str(percent)
-	print
+print str(len(client)) + " Client: " + str(sorted(client)) + "\n"
+print str(len(guard)) + " Guard: " + str(sorted(guard)) + "\n"
+print str(len(exit)) + " Exit: " + str(sorted(exit)) + "\n"
+print str(len(dest)) + " Dest: " + str(sorted(dest)) + "\n"
 
-# for key, value in as_circuitIDPairs.iteritems():
-# 	percent = 1.0 * len(value) / len(circuits)
-# 	print str(percent) + " AS: " + key
