@@ -14,16 +14,6 @@ cd $DATA_FOLDER
 # This command deletes those files
 find $DATA_FOLDER -name "(*)" -exec rm '{}' \;
 
-if [[ $1 == *entryExit* ]];
-then
-	type="Both"
-elif [[ $1 == *exit* ]]
-then
-	type="Exit"
-else
-	type="Entry"
-fi
-
 # For logging progress
 base=`basename "$DATA_FOLDER"`
 touch "$CURR_DIR"/logs/$base
