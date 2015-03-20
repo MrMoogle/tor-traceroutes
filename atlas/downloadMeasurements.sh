@@ -8,6 +8,8 @@
 inputFolder=$1
 outputFolder=$2
 
+CURR_DIR=`pwd`
+
 # Downloads traceroute and extracts AS level path
 function download
 {
@@ -26,7 +28,7 @@ function download
 	fi 
 
 	# Extracts source and destination AS from traceroute JSON
-	python ~/Desktop/"Independent Work"/tor-traceroutes/atlas/extractSrcDestIP.py $fp/$n.json > $fp/destsrc$n
+	python ~/tor-traceroutes/atlas/extractSrcDestIP.py $fp/$n.json > $fp/destsrc$n
 	nc whois.cymru.com 43 < $fp/destsrc$n | awk '{print $1}' | tail -n +2 > $fp/temp_destsrc$n
 
 	srcAS=`head -1 $fp/temp_destsrc$n`
