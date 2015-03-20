@@ -27,7 +27,7 @@ function download
 
 	# Extracts source and destination AS from traceroute JSON
 	python ~/Desktop/"Independent Work"/tor-traceroutes/atlas/extractSrcDestIP.py $fp/$n.json > $fp/destsrc$n
-	netcat whois.cymru.com 43 < $fp/destsrc$n | awk '{print $1}' | tail -n +2 > $fp/temp_destsrc$n
+	nc whois.cymru.com 43 < $fp/destsrc$n | awk '{print $1}' | tail -n +2 > $fp/temp_destsrc$n
 
 	srcAS=`head -1 $fp/temp_destsrc$n`
 	destAS=`tail -1 $fp/temp_destsrc$n`
@@ -41,7 +41,7 @@ function download
 	echo "end" >> $fp/"$srcAS-$destAS" 
 	rm $fp/$n.json
 
-	netcat whois.cymru.com 43 < $fp/"$srcAS-$destAS" | awk '{print $1}' | awk '!x[$0]++' | tail -n +2 | grep -o "[0-9]\+" > $fp/"temp$srcAS-$destAS" 
+	nc whois.cymru.com 43 < $fp/"$srcAS-$destAS" | awk '{print $1}' | awk '!x[$0]++' | tail -n +2 | grep -o "[0-9]\+" > $fp/"temp$srcAS-$destAS" 
 	mv $fp/"temp$srcAS-$destAS" $fp/"$srcAS-$destAS"
 }
 
