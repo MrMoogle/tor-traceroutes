@@ -12,7 +12,7 @@ cd $DATA_FOLDER
 
 # For some reason, we get these weird files that mess up the script. 
 # This command deletes those files
-find $DATA_FOLDER -name "(*)" -exec rm '{}' \;
+find $CURR_DIR/$DATA_FOLDER -name "(*)" -exec rm '{}' \;
 
 # For logging progress
 base=`basename "$DATA_FOLDER"`

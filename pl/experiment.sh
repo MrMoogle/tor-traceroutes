@@ -19,10 +19,9 @@ mkdir $ENTRYEXIT_DIRNAME
 # Copies back the traceroute data, deletes it, and runs a new traceroute job
 function nodeOp 
 {
-	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:entry.csv $ENTRY_DIRNAME/$1 2> /dev/null 
-#
-  	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:exit.csv $EXIT_DIRNAME/$1 2> /dev/null 
-  	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:entryExit.csv $ENTRYEXIT_DIRNAME/$1 2> /dev/null 
+	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:entry.csv $ENTRY_DIRNAME/$1 2> /dev/null
+  	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:exit.csv $EXIT_DIRNAME/$1 2> /dev/null
+  	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:entryExit.csv $ENTRYEXIT_DIRNAME/$1 2> /dev/null
 	
 	ssh -n princeton_oscar@$1 "nohup bash trace.sh > /dev/null 2>&1"
 }
@@ -33,7 +32,7 @@ cd
 while read PLNode           
 do
  	nodeOp $PLNode
- 	sleep 5
+ 	sleep 1
  	echo $PLNode >> logs/experiment"($DATE)"
 done < backup/allNodes.txt
 
