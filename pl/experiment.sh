@@ -23,18 +23,19 @@ function nodeOp
   	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:exit.csv $EXIT_DIRNAME/$1 2> /dev/null
   	scp -r -o BatchMode=yes -o ConnectTimeout=5 -r princeton_oscar@$1:entryExit.csv $ENTRYEXIT_DIRNAME/$1 2> /dev/null
 	
-	ssh -n princeton_oscar@$1 "nohup bash trace.sh > /dev/null 2>&1"
+	ssh -n -o BatchMode=yes -o ConnectTimeout=5 princeton_oscar@$1 "nohup bash trace.sh > /dev/null 2>&1"
 }
 
 cd
 
 # Copies traceroute data back to local machine
+# Trying to do this in parallel
 while read PLNode           
 do
- 	nodeOp $PLNode
+ 	nodeOp $PLNode & 
  	sleep 1
- 	echo $PLNode >> logs/experiment"($DATE)"
-done < backup/allNodes.txt
+ 	echo $PLNode
+done < ~/backup/allNodes.txt
 
 # Inserts data into database 
 bash tor-traceroutes/db/insertIntoDB.sh $ENTRY_DIRNAME
