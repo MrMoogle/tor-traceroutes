@@ -28,13 +28,16 @@ function nodeOp
 
 cd
 
+# For logging progress
+touch logs/experiment$DATE
+
 # Copies traceroute data back to local machine
 # Trying to do this in parallel
 while read PLNode           
 do
- 	nodeOp $PLNode & 
+ 	nodeOp $PLNode
  	sleep 1
- 	echo $PLNode
+ 	echo $PLNode >> logs/experiment$DATE
 done < ~/backup/allNodes.txt
 
 # Inserts data into database 
