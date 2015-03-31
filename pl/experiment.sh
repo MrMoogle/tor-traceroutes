@@ -32,7 +32,7 @@ cd
 touch logs/experiment$DATE
 
 # Copies traceroute data back to local machine
-# Trying to do this in parallel
+# Do not try to parallelize
 while read PLNode           
 do
  	nodeOp $PLNode

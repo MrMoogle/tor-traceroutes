@@ -38,6 +38,9 @@ def format(name, reverse):
 	srcDest = os.path.basename(name)
 	arr = srcDest.split("-")
 
+	if len(arr) != 2:
+		print arr 
+
 	# Incredibly bad style but handles some matching errors
 	if arr[0] == "8966":
 		arr[0] = "5384"
@@ -95,8 +98,8 @@ def analyze(d1, d2, format1, format2):
 # Contains the file paths to each day's set 
 arr1 = fileToArray(open(sys.argv[1]))
 arr2 = fileToArray(open(sys.argv[2]))
-# arr3 = fileToArray(open(sys.argv[3]))
-# arr4 = fileToArray(open(sys.argv[4]))
+arr3 = fileToArray(open(sys.argv[3]))
+arr4 = fileToArray(open(sys.argv[4]))
 
 # length should be the same for both arrays
 length = len(arr1)
@@ -104,15 +107,15 @@ length = len(arr1)
 for i in range(0, length):
 	dataset1 = glob.glob(arr1[i] + "/*")
 	dataset2 = glob.glob(arr2[i] + "/*")
-	# dataset3 = glob.glob(arr3[i] + "/*")
-	# dataset4 = glob.glob(arr4[i] + "/*")
+	dataset3 = glob.glob(arr3[i] + "/*")
+	dataset4 = glob.glob(arr4[i] + "/*")
 
 	# Can comment out the last three lines if you want to do non-assymetric 
 	# analysis
 	analyze(dataset1, dataset2, False, False)
-	# analyze(dataset4, dataset3, True, True)
-	# analyze(dataset4, dataset2, True, False)
-	# analyze(dataset1, dataset3, False, True)
+	analyze(dataset4, dataset3, True, True)
+	analyze(dataset4, dataset2, True, False)
+	analyze(dataset1, dataset3, False, True)
 
 print str(len(client)) + " Client: " + str(sorted(client)) + "\n"
 print str(len(guard)) + " Guard: " + str(sorted(guard)) + "\n"
