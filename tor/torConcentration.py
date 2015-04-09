@@ -37,6 +37,9 @@ with Controller.from_port(port = 9051) as controller:
 				AS_BW[AS] = bandwidth
 
 			totBW += bandwidth
+			
+		prevPrevLine = prevLine 
+		prevLine = line
 
 for key, value in AS_BW.iteritems():
 	percent = 1.0 * value / totBW
