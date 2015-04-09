@@ -33,7 +33,7 @@ with Controller.from_port(port = 9051) as controller:
 
 			if AS in AS_BW:
 				AS_BW[AS] += bandwidth
-			else
+			else:
 				AS_BW[AS] = bandwidth
 
 			totBW += bandwidth
