@@ -12,8 +12,10 @@ import re
 # Interfaces with the Tor control port
 entryBW = 0
 exitBW = 0
+allBW = 0 
 numEntryNodes = 0
 numExitNodes = 0 
+numAllNodes = 0
 
 with Controller.from_port(port = 9051) as controller:
 	controller.authenticate("") 
@@ -32,9 +34,14 @@ with Controller.from_port(port = 9051) as controller:
 			bandwidth = re.search(r'\d+', line)
 			entryBW+= int(bandwidth.group())
 			numEntryNodes+= 1
+		if "Bandwidth" in line and "Running" in prevLine: 
+			bandwidth = re.search(r'\d+', line)
+			allBW+= int(bandwidth.group())
+			numAllNodes+= 1
 
 		prevPrevLine = prevLine 
 		prevLine = line
 
 	print str(numExitNodes) + " Exit nodes with " + str(exitBW) 
 	print str(numEntryNodes) + " Guard nodes with " + str(entryBW)
+	print str(numAllNodes) + " Running nodes with " + str(allBW)
