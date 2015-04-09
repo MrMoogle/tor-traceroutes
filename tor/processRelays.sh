@@ -12,7 +12,7 @@ while read line
 do
 	IP=`echo $line | cut -f1 -d" "`
 	BW=`echo $line | cut -f2 -d" "`
-	AS=`whois -h whois.cymru.com " -v $IP" | sed -n 2p | cut -f1 -d" "` 
+	AS=`whois -h whois.cymru.com " -v $IP" | tail -1 | awk '{print $1}'` 
 	echo "$AS $BW" >> temp.txt
 done < $1 
 
