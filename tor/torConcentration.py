@@ -27,8 +27,8 @@ with Controller.from_port(port = 9051) as controller:
 	for line in buf:
 
 		if "Bandwidth" in line and RELAY_TYPE in prevLine:
-			bandwidth = re.search(r'\d+', line)
-			ip = re.search('\d+\.\d+\.\d+\.\d+', prevPrevLine)
+			bandwidth = re.search(r'\d+', line).group()
+			ip = re.search('\d+\.\d+\.\d+\.\d+', prevPrevLine).group()
 			AS = IPWhois(ip).lookup()['asn']
 
 			if AS in AS_BW:
@@ -37,7 +37,7 @@ with Controller.from_port(port = 9051) as controller:
 				AS_BW[AS] = bandwidth
 
 			totBW += bandwidth
-			
+
 		prevPrevLine = prevLine 
 		prevLine = line
 
