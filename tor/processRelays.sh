@@ -16,9 +16,11 @@ do
 	echo "$AS $BW" >> temp.txt
 done < $1 
 
+
 awk '{ amount[$1] += $2 }
  END { for (name in amount)
  print name, amount[name]
  }' temp.txt | sort -k2 -n 
 
 rm temp.txt
+

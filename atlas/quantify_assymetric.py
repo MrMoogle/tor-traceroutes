@@ -30,15 +30,16 @@ as_circuitIDPairs = dict()
 
 # Given a set of ASes and a circuit ID, adds AS - Circuit ID pairs
 # to as_circuitIDPairs 
-# def addToAS_circuitIDPairs(asSet, circuitID):
-# 	global as_circuitIDPairs
+def addToAS_circuitIDPairs(asSet, circuitID):
+	global as_circuitIDPairs
 
-# 	for AS in asSet:
-# 		if AS in as_circuitIDPairs:
-# 			as_circuitIDPairs[AS].add(circuitID)
-# 		else:
-# 			as_circuitIDPairs[AS] = set() 
-
+	for AS in asSet:
+		fAS = AS.rstrip()
+		if fAS in as_circuitIDPairs:
+			as_circuitIDPairs[fAS].add(circuitID)
+		else:
+			as_circuitIDPairs[fAS] = set() 
+			as_circuitIDPairs[fAS].add(circuitID)
 
 # Given a file, returns an array in which each element
 # contains a line of the file
@@ -113,9 +114,6 @@ def analyze(d1, d2, format1, format2):
 
 			circuit_id = srcDest1 + "_" + srcDest2
 
-			# addToAS_circuitIDPairs(s1, circuit_id)
-			# addToAS_circuitIDPairs(s2, circuit_id)
-
 			entry_segment = srcDest1.split("-")
 			exit_segment = srcDest2.split("-")
 			clientAS = entry_segment[0]
@@ -123,22 +121,17 @@ def analyze(d1, d2, format1, format2):
 			exitAS = exit_segment[0]
 			destAS = exit_segment[1]
 
-			if (clientAS in client) and (guardAS in guard) and (exitAS in exit) and (destAS in dest):
+			if (clientAS in client) and (guardAS in guard) and (exitAS in exit) and (destAS in dest) and (clientAS != exitAS) and (clientAS != destAS) and (guardAS != exitAS) and (guardAS != destAS):
 				circuits.add(circuit_id)
-				
+
+				intersection = s1 | s2
+
+				addToAS_circuitIDPairs(intersection, circuit_id)
+
 				# If the two sets of ASes are not disjoint (i.e. they 
-				# have a common AS), the circuit can be compromised.
+				# share common ASes), the circuit can be compromised.
 				if not s1.isdisjoint(s2):
 					compromisedCircuits.add(circuit_id)
-
-				# intersection = s1 & s2 
-
-				# for AS in intersection: 
-				# 	fAS = AS.rstrip()
-
-				# 	if (fAS not in client) and (fAS not in guard) and (fAS not in exit) and (fAS not in dest):
-				# 		compromisedCircuits.add(circuit_id)
-				# 		break
 
 
 # Contains the file paths to each day's set 
@@ -159,14 +152,16 @@ for i in range(0, length):
 	# Can comment out the last three lines if you want to do non-assymetric 
 	# analysis
 	analyze(dataset1, dataset2, False, False)
-	analyze(dataset4, dataset3, True, True)
-	analyze(dataset4, dataset2, True, False)
-	analyze(dataset1, dataset3, False, True)
+	# analyze(dataset4, dataset3, True, True)
+	# analyze(dataset4, dataset2, True, False)
+	# analyze(dataset1, dataset3, False, True)
 
 	percent = 1.0 * len(compromisedCircuits) / len(circuits)
-	print "Day " + str(i + 1) + ": " + str(len(compromisedCircuits)) + " / " + str(len(circuits)) + " = " + str(percent)
-	print
+	print str(i + 1) + " " + str(percent)
+# 	print
 
+# tot = 0 
 # for key, value in as_circuitIDPairs.iteritems():
 # 	percent = 1.0 * len(value) / len(circuits)
+# 	tot = tot + percent 
 # 	print str(percent) + " AS: " + key

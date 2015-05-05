@@ -19,7 +19,7 @@ else:
 all_nodes = api_server.GetNodes(auth)
 for entry in all_nodes:
 	print entry['hostname']
-	# array.append(entry['hostname'])
+	array.append(entry['hostname'])
 
-#your slicename in the middle argument (e.g. "princeton_oli")
-# api_server.AddSliceToNodes(auth, "princeton_oscar", array) 
+#your slicename in the middle argument (e.g. "princeton_oscar")
+api_server.AddSliceToNodes(auth, "princeton_oscar", array) 
